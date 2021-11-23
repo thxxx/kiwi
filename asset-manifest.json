@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kiwi/static/css/main.b561c8bc.chunk.css",
+    "main.js": "/kiwi/static/js/main.e6b0f5c9.chunk.js",
+    "main.js.map": "/kiwi/static/js/main.e6b0f5c9.chunk.js.map",
+    "runtime-main.js": "/kiwi/static/js/runtime-main.54a6c5d4.js",
+    "runtime-main.js.map": "/kiwi/static/js/runtime-main.54a6c5d4.js.map",
+    "static/js/2.80d46dde.chunk.js": "/kiwi/static/js/2.80d46dde.chunk.js",
+    "static/js/2.80d46dde.chunk.js.map": "/kiwi/static/js/2.80d46dde.chunk.js.map",
+    "static/js/3.f0ddf417.chunk.js": "/kiwi/static/js/3.f0ddf417.chunk.js",
+    "static/js/3.f0ddf417.chunk.js.map": "/kiwi/static/js/3.f0ddf417.chunk.js.map",
+    "index.html": "/kiwi/index.html",
+    "static/css/main.b561c8bc.chunk.css.map": "/kiwi/static/css/main.b561c8bc.chunk.css.map",
+    "static/js/2.80d46dde.chunk.js.LICENSE.txt": "/kiwi/static/js/2.80d46dde.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/kiwi/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.54a6c5d4.js",
+    "static/js/2.80d46dde.chunk.js",
+    "static/css/main.b561c8bc.chunk.css",
+    "static/js/main.e6b0f5c9.chunk.js"
+  ]
+}
