@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/kiwi/static/css/main.23ee008d.chunk.css",
-    "main.js": "/kiwi/static/js/main.6f4d3477.chunk.js",
-    "main.js.map": "/kiwi/static/js/main.6f4d3477.chunk.js.map",
+    "main.js": "/kiwi/static/js/main.57e729fa.chunk.js",
+    "main.js.map": "/kiwi/static/js/main.57e729fa.chunk.js.map",
     "runtime-main.js": "/kiwi/static/js/runtime-main.f97e3314.js",
     "runtime-main.js.map": "/kiwi/static/js/runtime-main.f97e3314.js.map",
     "static/js/2.f35b06a1.chunk.js": "/kiwi/static/js/2.f35b06a1.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.f97e3314.js",
     "static/js/2.f35b06a1.chunk.js",
     "static/css/main.23ee008d.chunk.css",
-    "static/js/main.6f4d3477.chunk.js"
+    "static/js/main.57e729fa.chunk.js"
   ]
 }
