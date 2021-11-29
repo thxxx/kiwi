@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/kiwi/static/css/main.18485459.chunk.css",
-    "main.js": "/kiwi/static/js/main.8dcf88fc.chunk.js",
-    "main.js.map": "/kiwi/static/js/main.8dcf88fc.chunk.js.map",
-    "runtime-main.js": "/kiwi/static/js/runtime-main.f97e3314.js",
-    "runtime-main.js.map": "/kiwi/static/js/runtime-main.f97e3314.js.map",
-    "static/js/2.64052bc9.chunk.js": "/kiwi/static/js/2.64052bc9.chunk.js",
-    "static/js/2.64052bc9.chunk.js.map": "/kiwi/static/js/2.64052bc9.chunk.js.map",
-    "static/js/3.eae0500a.chunk.js": "/kiwi/static/js/3.eae0500a.chunk.js",
-    "static/js/3.eae0500a.chunk.js.map": "/kiwi/static/js/3.eae0500a.chunk.js.map",
-    "index.html": "/kiwi/index.html",
-    "static/css/main.18485459.chunk.css.map": "/kiwi/static/css/main.18485459.chunk.css.map",
-    "static/js/2.64052bc9.chunk.js.LICENSE.txt": "/kiwi/static/js/2.64052bc9.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/kiwi/static/media/logo.6ce24c58.svg",
-    "static/media/section0.f91c3bee.png": "/kiwi/static/media/section0.f91c3bee.png",
-    "static/media/section1.732058d6.png": "/kiwi/static/media/section1.732058d6.png",
-    "static/media/section3.8d8e5114.png": "/kiwi/static/media/section3.8d8e5114.png"
+    "main.css": "/static/css/main.18485459.chunk.css",
+    "main.js": "/static/js/main.8dcf88fc.chunk.js",
+    "main.js.map": "/static/js/main.8dcf88fc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.83ad6d1e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.83ad6d1e.js.map",
+    "static/js/2.0266f7f4.chunk.js": "/static/js/2.0266f7f4.chunk.js",
+    "static/js/2.0266f7f4.chunk.js.map": "/static/js/2.0266f7f4.chunk.js.map",
+    "static/js/3.eae0500a.chunk.js": "/static/js/3.eae0500a.chunk.js",
+    "static/js/3.eae0500a.chunk.js.map": "/static/js/3.eae0500a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.18485459.chunk.css.map": "/static/css/main.18485459.chunk.css.map",
+    "static/js/2.0266f7f4.chunk.js.LICENSE.txt": "/static/js/2.0266f7f4.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/section0.f91c3bee.png": "/static/media/section0.f91c3bee.png",
+    "static/media/section1.732058d6.png": "/static/media/section1.732058d6.png",
+    "static/media/section3.8d8e5114.png": "/static/media/section3.8d8e5114.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f97e3314.js",
-    "static/js/2.64052bc9.chunk.js",
+    "static/js/runtime-main.83ad6d1e.js",
+    "static/js/2.0266f7f4.chunk.js",
     "static/css/main.18485459.chunk.css",
     "static/js/main.8dcf88fc.chunk.js"
   ]
