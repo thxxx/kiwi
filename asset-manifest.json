@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.be2aea2e.chunk.css",
-    "main.js": "/static/js/main.fbce940d.chunk.js",
-    "main.js.map": "/static/js/main.fbce940d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.dbfdf6f8.js",
-    "runtime-main.js.map": "/static/js/runtime-main.dbfdf6f8.js.map",
+    "main.css": "/static/css/main.830952ad.chunk.css",
+    "main.js": "/static/js/main.45306300.chunk.js",
+    "main.js.map": "/static/js/main.45306300.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.49b158f7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.49b158f7.js.map",
     "static/css/2.b5746912.chunk.css": "/static/css/2.b5746912.chunk.css",
-    "static/js/2.fedc7d5a.chunk.js": "/static/js/2.fedc7d5a.chunk.js",
-    "static/js/2.fedc7d5a.chunk.js.map": "/static/js/2.fedc7d5a.chunk.js.map",
-    "static/js/3.bafe6af5.chunk.js": "/static/js/3.bafe6af5.chunk.js",
-    "static/js/3.bafe6af5.chunk.js.map": "/static/js/3.bafe6af5.chunk.js.map",
+    "static/js/2.e3db6acb.chunk.js": "/static/js/2.e3db6acb.chunk.js",
+    "static/js/2.e3db6acb.chunk.js.map": "/static/js/2.e3db6acb.chunk.js.map",
+    "static/js/3.9766088e.chunk.js": "/static/js/3.9766088e.chunk.js",
+    "static/js/3.9766088e.chunk.js.map": "/static/js/3.9766088e.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.b5746912.chunk.css.map": "/static/css/2.b5746912.chunk.css.map",
-    "static/css/main.be2aea2e.chunk.css.map": "/static/css/main.be2aea2e.chunk.css.map",
-    "static/js/2.fedc7d5a.chunk.js.LICENSE.txt": "/static/js/2.fedc7d5a.chunk.js.LICENSE.txt",
+    "static/css/main.830952ad.chunk.css.map": "/static/css/main.830952ad.chunk.css.map",
+    "static/js/2.e3db6acb.chunk.js.LICENSE.txt": "/static/js/2.e3db6acb.chunk.js.LICENSE.txt",
     "static/media/001.9ca7a7c7.png": "/static/media/001.9ca7a7c7.png",
     "static/media/003.3b761180.png": "/static/media/003.3b761180.png",
     "static/media/005.acb6cc04.png": "/static/media/005.acb6cc04.png",
@@ -38,10 +38,10 @@
     "static/media/surfeelogo.b1777ed7.png": "/static/media/surfeelogo.b1777ed7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.dbfdf6f8.js",
+    "static/js/runtime-main.49b158f7.js",
     "static/css/2.b5746912.chunk.css",
-    "static/js/2.fedc7d5a.chunk.js",
-    "static/css/main.be2aea2e.chunk.css",
-    "static/js/main.fbce940d.chunk.js"
+    "static/js/2.e3db6acb.chunk.js",
+    "static/css/main.830952ad.chunk.css",
+    "static/js/main.45306300.chunk.js"
   ]
 }
