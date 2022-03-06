@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f8ab070.chunk.css",
-    "main.js": "/static/js/main.8f8aaebf.chunk.js",
-    "main.js.map": "/static/js/main.8f8aaebf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c3609fcc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c3609fcc.js.map",
+    "main.css": "/static/css/main.e12ca234.chunk.css",
+    "main.js": "/static/js/main.eb7488b3.chunk.js",
+    "main.js.map": "/static/js/main.eb7488b3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b4a0db31.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b4a0db31.js.map",
     "static/css/2.b5746912.chunk.css": "/static/css/2.b5746912.chunk.css",
-    "static/js/2.60b7d161.chunk.js": "/static/js/2.60b7d161.chunk.js",
-    "static/js/2.60b7d161.chunk.js.map": "/static/js/2.60b7d161.chunk.js.map",
-    "static/js/3.ea3286ed.chunk.js": "/static/js/3.ea3286ed.chunk.js",
-    "static/js/3.ea3286ed.chunk.js.map": "/static/js/3.ea3286ed.chunk.js.map",
+    "static/js/2.8e3c39d4.chunk.js": "/static/js/2.8e3c39d4.chunk.js",
+    "static/js/2.8e3c39d4.chunk.js.map": "/static/js/2.8e3c39d4.chunk.js.map",
+    "static/js/3.7ad13137.chunk.js": "/static/js/3.7ad13137.chunk.js",
+    "static/js/3.7ad13137.chunk.js.map": "/static/js/3.7ad13137.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.b5746912.chunk.css.map": "/static/css/2.b5746912.chunk.css.map",
-    "static/css/main.8f8ab070.chunk.css.map": "/static/css/main.8f8ab070.chunk.css.map",
-    "static/js/2.60b7d161.chunk.js.LICENSE.txt": "/static/js/2.60b7d161.chunk.js.LICENSE.txt",
+    "static/css/main.e12ca234.chunk.css.map": "/static/css/main.e12ca234.chunk.css.map",
+    "static/js/2.8e3c39d4.chunk.js.LICENSE.txt": "/static/js/2.8e3c39d4.chunk.js.LICENSE.txt",
     "static/media/001.9ca7a7c7.png": "/static/media/001.9ca7a7c7.png",
     "static/media/003.3b761180.png": "/static/media/003.3b761180.png",
     "static/media/005.acb6cc04.png": "/static/media/005.acb6cc04.png",
@@ -62,6 +62,7 @@
     "static/media/person2.405c4377.png": "/static/media/person2.405c4377.png",
     "static/media/person3.6b91b7a8.png": "/static/media/person3.6b91b7a8.png",
     "static/media/playstorebutton.83ce8234.png": "/static/media/playstorebutton.83ce8234.png",
+    "static/media/profile.bcd7686e.png": "/static/media/profile.bcd7686e.png",
     "static/media/rt1.78d4911e.png": "/static/media/rt1.78d4911e.png",
     "static/media/rt2.efb4579d.png": "/static/media/rt2.efb4579d.png",
     "static/media/rt3.8816934f.png": "/static/media/rt3.8816934f.png",
@@ -72,10 +73,10 @@
     "static/media/surfeelogo.b1777ed7.png": "/static/media/surfeelogo.b1777ed7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3609fcc.js",
+    "static/js/runtime-main.b4a0db31.js",
     "static/css/2.b5746912.chunk.css",
-    "static/js/2.60b7d161.chunk.js",
-    "static/css/main.8f8ab070.chunk.css",
-    "static/js/main.8f8aaebf.chunk.js"
+    "static/js/2.8e3c39d4.chunk.js",
+    "static/css/main.e12ca234.chunk.css",
+    "static/js/main.eb7488b3.chunk.js"
   ]
 }
