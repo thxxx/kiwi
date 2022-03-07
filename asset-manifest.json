@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c641c30.chunk.css",
-    "main.js": "/static/js/main.b4ac9e1b.chunk.js",
-    "main.js.map": "/static/js/main.b4ac9e1b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b4a0db31.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b4a0db31.js.map",
+    "main.css": "/static/css/main.79abc26f.chunk.css",
+    "main.js": "/static/js/main.88b73ad3.chunk.js",
+    "main.js.map": "/static/js/main.88b73ad3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c3609fcc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c3609fcc.js.map",
     "static/css/2.b5746912.chunk.css": "/static/css/2.b5746912.chunk.css",
-    "static/js/2.05bae1d5.chunk.js": "/static/js/2.05bae1d5.chunk.js",
-    "static/js/2.05bae1d5.chunk.js.map": "/static/js/2.05bae1d5.chunk.js.map",
-    "static/js/3.7ad13137.chunk.js": "/static/js/3.7ad13137.chunk.js",
-    "static/js/3.7ad13137.chunk.js.map": "/static/js/3.7ad13137.chunk.js.map",
+    "static/js/2.bde9a712.chunk.js": "/static/js/2.bde9a712.chunk.js",
+    "static/js/2.bde9a712.chunk.js.map": "/static/js/2.bde9a712.chunk.js.map",
+    "static/js/3.ea3286ed.chunk.js": "/static/js/3.ea3286ed.chunk.js",
+    "static/js/3.ea3286ed.chunk.js.map": "/static/js/3.ea3286ed.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.b5746912.chunk.css.map": "/static/css/2.b5746912.chunk.css.map",
-    "static/css/main.1c641c30.chunk.css.map": "/static/css/main.1c641c30.chunk.css.map",
-    "static/js/2.05bae1d5.chunk.js.LICENSE.txt": "/static/js/2.05bae1d5.chunk.js.LICENSE.txt",
+    "static/css/main.79abc26f.chunk.css.map": "/static/css/main.79abc26f.chunk.css.map",
+    "static/js/2.bde9a712.chunk.js.LICENSE.txt": "/static/js/2.bde9a712.chunk.js.LICENSE.txt",
     "static/media/001.9ca7a7c7.png": "/static/media/001.9ca7a7c7.png",
     "static/media/003.3b761180.png": "/static/media/003.3b761180.png",
     "static/media/005.acb6cc04.png": "/static/media/005.acb6cc04.png",
@@ -58,6 +58,7 @@
     "static/media/main5.f3763aa4.gif": "/static/media/main5.f3763aa4.gif",
     "static/media/main6.cb0ab3f2.gif": "/static/media/main6.cb0ab3f2.gif",
     "static/media/mobile.1326a38e.png": "/static/media/mobile.1326a38e.png",
+    "static/media/outdoor.8339f4b8.png": "/static/media/outdoor.8339f4b8.png",
     "static/media/person1.a8ceb4f7.png": "/static/media/person1.a8ceb4f7.png",
     "static/media/person2.405c4377.png": "/static/media/person2.405c4377.png",
     "static/media/person3.6b91b7a8.png": "/static/media/person3.6b91b7a8.png",
@@ -73,10 +74,10 @@
     "static/media/surfeelogo.b1777ed7.png": "/static/media/surfeelogo.b1777ed7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4a0db31.js",
+    "static/js/runtime-main.c3609fcc.js",
     "static/css/2.b5746912.chunk.css",
-    "static/js/2.05bae1d5.chunk.js",
-    "static/css/main.1c641c30.chunk.css",
-    "static/js/main.b4ac9e1b.chunk.js"
+    "static/js/2.bde9a712.chunk.js",
+    "static/css/main.79abc26f.chunk.css",
+    "static/js/main.88b73ad3.chunk.js"
   ]
 }
