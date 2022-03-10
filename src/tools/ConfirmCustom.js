@@ -33,7 +33,7 @@ const style = {
   bgcolor: 'rgba(255,255,255,1)',
   border: '0px solid #000',
   flexDirection:'column',
-  p: 2,
+  p: 1,
   px: 4,
   pb: 3,
   display:'flex',
@@ -55,10 +55,10 @@ function ConfirmCustom({open, setOpen, message, callback, warn}) {
             BackdropComponent={Backdrop}
         >
             <Box sx={style}>
-                <div className="center-column confirm-message" style={{height:'80%'}}>
+                <div className="center-column confirm-message" style={{height:'60%'}}>
                     {
                         warn && 
-                        <div style={{marginBottom:'12px'}}>
+                        <div className="alert">
                             주의
                         </div>
                     }

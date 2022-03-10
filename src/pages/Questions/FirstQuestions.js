@@ -269,6 +269,16 @@ function FirstQuestions({history}) {
         return regExp.test(v);
     }
 
+    // const nextPage = () => {
+    //     setCnum(cnum + 1)
+    // }
+
+    // const onKeyPress = (e) => {
+    //     if(e.key == 'Enter'){
+    //         nextPage();
+    //     }
+    // }
+
     const content = () => {
         switch(cnum){
             case 1:
@@ -327,7 +337,7 @@ function FirstQuestions({history}) {
                             </div>
                             <div className="modal-button-container">
                                 <div className="modal-move-button-back" onClick={e => setCnum(cnum - 1)}>이전</div>
-                                <div className="modal-move-button" onClick={e => nextAndSetTemplates()}>다음</div>  
+                                <div className="modal-move-button" onSubmit={e => setCnum(cnum + 1)} onClick={e => nextAndSetTemplates()}>다음</div>  
                             </div>
                         </>
                     </ModalBox>
