@@ -49,10 +49,21 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-
-    font-size: 0.95em;
+    font-weight:medium;
+    font-size: 0.85em;
     margin-left:30px;
-    color: #EB8A8A;
+    color: #FF5B5B;
+}
+
+.do-text{
+    font-size: 0.90em;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.click{
+    display: inline;
+    margin-top: 20px;
 }
 
 .get-buttons-container button{

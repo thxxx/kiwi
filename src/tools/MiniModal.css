@@ -30,13 +30,14 @@
 }
 
 .sub{
-    margin-top: 20px;
+    margin-top: 15px;
     color: black;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.check_button:hover{
+.s-text{
+    color: var(--main-color);
 }

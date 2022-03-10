@@ -102,7 +102,7 @@ function ImageOrSlide({content}){
             // 이미지
             if( content.contents.type === 'image' )
                 return (
-                    <div id="attach" onChange = {e => upload_img(e)} onClick={inputClick} className="centera">
+                    <div id="attach" onChange = {e => upload_img(e)} className="centera">
                          <input
                             ref={photoInput}
                             style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
@@ -113,6 +113,7 @@ function ImageOrSlide({content}){
                         <img 
                             src={`${content.image.attachment === '' ? ourA : content.image.attachment}`} 
                             className="image border-hover" 
+                            onClick={inputClick}
                             style={{
                                 borderRadius:`${content.image.border}px`,
                                 width:`${imageWidth()}%`, 
@@ -123,7 +124,7 @@ function ImageOrSlide({content}){
             // 목업 - 모바일
             if(content.mockup.type === 'mobile' && content.contents.type === 'mockup' )
                 return( 
-                <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={inputClick}>
+                <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)}>
                     <input
                         ref={photoInput}
                         style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
@@ -132,7 +133,7 @@ function ImageOrSlide({content}){
                         id="file"
                         onChange = {e => upload_mockup(e)}
                     />
-                   <img className="mobile-ex  border-hover" src={Phone} alt="목업틀" style={{ width:`${imageWidth()}%` }} />
+                   <img className="mobile-ex  border-hover" onClick={inputClick} src={Phone} alt="목업틀" style={{ width:`${imageWidth()}%` }} />
                     { content.mockup.attachment === '' ?
                     <></>:
                     <img className="upload-mobile  border-hover" src={content.mockup.attachment} style={{ 
@@ -143,7 +144,7 @@ function ImageOrSlide({content}){
             // 목업 - 데스크탑
             if(content.mockup.type === 'desktop' && content.contents.type === 'mockup' )
                 return(
-                    <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={inputClick}>
+                    <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)}>
                         <input
                         ref={photoInput}
                         style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
@@ -152,7 +153,7 @@ function ImageOrSlide({content}){
                         id="file"
                         onChange = {e => upload_mockup(e)}
                     />
-                        <img className="mobile-ex border-hover" src={Desktop} alt="목업틀" style={{width: `${imageWidth()}%`}} />
+                        <img className="mobile-ex border-hover" onClick={inputClick} src={Desktop} alt="목업틀" style={{width: `${imageWidth()}%`}} />
                         { content.mockup.attachment === '' ? 
                         <></> :
                         <img  className="upload-desk border-hover" src={`${content.mockup.attachment}`} style={{ 

@@ -36,7 +36,7 @@ const Deploy = styled('div')`
     position: fixed;
     top:20px;
     z-index:3000;
-    left:30vw;
+    left:28vw;
     box-shadow:2px 4px 14px #e2e2e2;
     text-align: center;
 `
@@ -66,8 +66,8 @@ function MiniModal({open, setOpen, copy, deploy, history}) {
                     첫 배포가 완료되었습니다! 
                     </div>
                     <div className="big-title sub">
-                    페이지 수정을 원하시면 '편집하기'를 눌러 편집 후 '저장하기'를 누르고, <br />
-                    관리 페이지에서 '배포하기'를 다시 눌러주세요. <br />
+                    페이지 수정을 원하시면 <span className="s-text">편집하기</span>를 눌러 편집 후 <span className="s-text">저장하기</span>를 누르고, <br />
+                    관리 페이지에서 <span className="s-text">배포하기</span>를 다시 눌러주세요. <br />
                     저장만 한 경우 수정사항이 반영되지 않습니다. <br />
                     </div>
                     <div className="check_button" onClick={() => {

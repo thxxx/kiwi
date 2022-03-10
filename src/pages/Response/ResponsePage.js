@@ -11,6 +11,7 @@ import ResultTopTitle from '../../components/Response/ResultTopTitle'
 import LoadingDisplay from '../../tools/LoadingDisplay'
 import gadata from '../../tools/datacodes/gadata.json'
 import { Tooltip, ChakraProvider } from '@chakra-ui/react'
+import {CursorClick} from '@styled-icons/fluentui-system-filled'
 import MiniModal from '../../tools/MiniModal'
 import ChannelTalk from '../../tools/ChannelTalk'
 
@@ -182,7 +183,7 @@ function ResponsePage({userObj, history}) {
                         }
                     </div>
                     :
-                    <div style={{marginTop:'15px'}}>
+                    <div className="do-text">
                         {
                             mylandings.length === 0 ?
                             <div>
@@ -190,7 +191,7 @@ function ResponsePage({userObj, history}) {
                             </div>
                             :
                             <div>
-                                확인할 페이지를 클릭하세요
+                                <CursorClick size={30}/> <div className="do-text click" style={{fontWeight: 600}}>확인할 페이지를 클릭하세요</div>
                             </div>
                         }
                     </div>

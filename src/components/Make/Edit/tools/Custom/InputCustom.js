@@ -33,7 +33,7 @@ export function InputCustom({value, func, placeholder, text, noKorean}) {
                 </div>
             }
             <div className="input-centera" style={{marginTop:`${text ? '12px' : '0px'}`, justifyContent:'start'}}>
-                <input className="edit-input" placeholder={placeholder} value={value} onChange={e => onChangeHandler(e)} />
+                <input className="edit-input" placeholder={placeholder} value={value} onChange={e => onChangeHandler(e)} spellCheck="false"/>
             </div>
         </div>
     )
