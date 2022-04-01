@@ -77,9 +77,6 @@ function AddingSection({setting, open, setOpen, foot}) {
 
             tempBody = eee[0].contents.filter(doc => doc.sectionTypeName === typeName)[0]
 
-            if(typeName === 'CtaSection'){
-                tempBody = base[2]
-            }
         }
 
         tempBody['animation'] = setting.animation

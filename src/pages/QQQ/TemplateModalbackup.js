@@ -3,8 +3,6 @@ import { styled, Box } from '@mui/system';
 import ModalUnstyled from '@mui/base/ModalUnstyled';
 import {Link} from 'react-router-dom'
 import { Input } from 'antd';
-//추가
-//추가
 
 const StyledModal = styled(ModalUnstyled)`
   position: fixed;
@@ -29,9 +27,7 @@ const Backdrop = styled('div')`
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-tap-highlight-color: transparent;
 `;
-//추가
 
-//추가
 const style = {
   width: '33vw',
   height: '30vh',

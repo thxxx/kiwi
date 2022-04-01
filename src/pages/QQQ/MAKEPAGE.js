@@ -247,6 +247,10 @@ const MakePageV2 = ({history, userObj}) => {
     <>
        <MyContext.Provider value={contextValue}>
            <MySubContext.Provider value={contextSubValue}>
+            <Prompt 
+                when={true}
+                message="편집내용이 저장되지 않았을 수 있습니다. 정말로 제작을 그만두시겠습니까?"
+            />
                <NavBarInMakePage 
                     editing={editing} editingId={editingId}
                     setEditing={setEditing} setEditingId={setEditingId}
