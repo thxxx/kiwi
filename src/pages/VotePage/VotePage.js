@@ -33,10 +33,10 @@ const Purple = styled('div')`
 `
 
 const FEATURES = [
-    'A/B 테스트',
     '신청폼 고도화',
     '신청 유저 명단 엑셀 파일 추출',
     '무료 이미지 및 아이콘 제공',
+    '위클리 페이지 콘테스트',
 ]
 
 function VotePage({history, isLoggedIn}) {
@@ -125,7 +125,7 @@ function VotePage({history, isLoggedIn}) {
     }
 
     return (
-        <div style={{width:'100%'}}>
+        <div style={{width:'100%', background:'rgba(0,0,0,0.1)'}}>
         <NavBarV2 history={history} isLoggedIn={isLoggedIn} />
         <div className="center-column" style={{padding:'100px 0px', fontFamily:'Noto Sans KR'}}>
             <div style={{placeItems:'center', textAlign:'center', width:'100%'}}>
@@ -138,16 +138,23 @@ function VotePage({history, isLoggedIn}) {
                 </div>
             </div>
             <div className="center-column" style={{width:'60%', marginTop:'30px'}}>
+                {/*추가*/}
+                <div style={{display:'flex', justifyContent:'center', width:'100%'}}>
+                    <div className="vote-one__container" style={{marginBottom:'20px',  width:'100%', padding:'30px 30px', fontSize:'1.1em', fontWeight:'700'}}>
+                        <TC style={{marginBottom:'10px'}}>🎉3월 업데이트🎉</TC> 텍스트 에디터 기능 추가
+                    </div>
+                </div>        
+               {/*추가*/}
                 <div style={{display:'flex', flexDirection:'row', width:'100%'}}>
-                    <div className="vote-one__container" style={{width:'45%'}}>
+                    <div className="vote-one__container" style={{width:'45%', marginRight:'10px'}}>
                         <div className="vote-title">
                             💡 현재 투표 순위
                         </div>
                         <div style={{margin:'10px 0px'}}>
-                            3월 업데이트
+                            4월 업데이트
                         </div>
                         <Purple>
-                            <Left><span style={{color:'#FFF500'}}>1</span>등</Left>
+                            <Left style={{width: '20%'}}><span style={{color:'#FFF500'}}>1</span>등</Left>
                             <span style={{width:'70%', textAlign:'center'}}>
                             {
                                 FEATURES[0]
@@ -155,38 +162,38 @@ function VotePage({history, isLoggedIn}) {
                             </span>
                         </Purple>
                         <Purple>
-                            <Left><span style={{color:'#FFAC33'}}>2</span>등</Left>
-                            <span style={{width:'70%', textAlign:'center'}}>
-                            {
-                                FEATURES[2]
-                            }
-                            </span>
-                        </Purple>
-                        <Purple>
-                            <Left><span style={{color:'#6AF467'}}>3</span>등</Left>
+                            <Left style={{width: '20%'}}><span style={{color:'#FFAC33'}}>2</span>등</Left>
                             <span style={{width:'70%', textAlign:'center'}}>
                             {
                                 FEATURES[1]
                             }
                             </span>
                         </Purple>
+                        <Purple>
+                            <Left style={{width: '20%'}}><span style={{color:'#6AF467'}}>3</span>등</Left>
+                            <span style={{width:'70%', textAlign:'center'}}>
+                            {
+                                FEATURES[2]
+                            }
+                            </span>
+                        </Purple>
                     </div>
-                    <div className="vote-one__container" style={{width:'55%'}}>
+                    <div className="vote-one__container" style={{width:'55%', marginLeft:'10px'}}>
                         <div className="vote-title">
                             🔔 현재 추가 중인 기능
                         </div>
                         <div className="soft-purple__container">
                             <div className="soft-purple-linear">
-                                텍스트 에디터 기능
+                                A/B 테스트
                             </div>
                             <div style={{fontSize:'0.9em'}}>
-                                이제 텍스트 볼드, 일부 색상이 변경 가능해요!<br/>
-                                페이지의 가독성을 높여보세요 :)
+                                이게 좋을지, 저게 좋을지<br/>
+                                이제 더 이상 고민하지말고, 테스트해보세요!
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="vote-one__container" style={{width:'90%'}}>
+                <div className="vote-one__container" style={{width:'calc(100% - 40px)', marginTop:'20px'}}>
                     <div className="vote-title">
                         👉 투표하기 👈
                     </div>
@@ -200,7 +207,7 @@ function VotePage({history, isLoggedIn}) {
                                 return(
                                     <div className="vote-option" onClick={() => setSelect(produce(select, draft => {
                                         draft[index] = !draft[index];
-                                    }))} style={{border:`2px solid ${select[index] ? '#6c63ff' : 'rgba(0,0,0,0)'}`, color:`${select[index] ? '#6c63ff' : 'rgba(0,0,0,1)'}`}}>
+                                    }))} style={{border:`1px solid ${select[index] ? '#6c63ff' : 'rgba(0,0,0,0.15)'}`, color:`${select[index] ? '#6c63ff' : 'rgba(0,0,0,1)'}`}}>
                                         {FEATURES[index]}
                                     </div>
                                 )
@@ -241,10 +248,10 @@ function VotePage({history, isLoggedIn}) {
                         다른 기능도 건의하기! →
                     </div>
                 </div>
-                <div style={{width:'91%'}}>
+                <div style={{width:'100%'}}>
                     <div onClick={() => {
                          window.open(
-                            'https://striped-cabin-4bf.notion.site/Surfee-903d24edba264a9e9a8245803f11db11',
+                            'https://www.notion.so/Surfee-e2153c36197d40cdb924bab5f54d5b71',
                             '_blank'
                         )
                     }} className="morphism-button" style={{width:'400px', padding:'30px 30px', fontSize:'1.1em', fontWeight:'700'}}>

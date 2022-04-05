@@ -13,6 +13,7 @@ import produce from 'immer';
 import lodash from 'lodash'
 import { Input } from 'antd';
 import { base } from '../../components/Make/SectionTypes/baseTypes'
+import ReactGa from 'react-ga'
 import {
     ChakraProvider,
     Button,
@@ -218,6 +219,12 @@ function FirstQuestions({history}) {
     const [miniModalText, setMiniModalText] = useState('');
 
     const {state, action} = useContext(MyContext) //ContextAPI로 state와 action을 넘겨받는다.
+
+    useEffect(() => {
+        // to report page view
+        ReactGa.initialize('UA-213792742-1');
+        ReactGa.pageview(`/questions`);
+    },[])
 
     const handleClose = async () => {
         // 마지막에는 입력한 정보도 저장한다. 근데 한명껄 여러번 저장해서 헷갈리지 않게..!
@@ -697,8 +704,8 @@ function FirstQuestions({history}) {
                             </div>    
                         </div>
                         <div className="modal-button-container">
-                            <div className="modal-move-button-back" onClick={e => setCnum(cnum - 1)}>이전</div>
-                            <div className="modal-move-button" onClick={() => nextAndSetFont2()}>다음</div>
+                            <div className="modal-move-button-back" onClick={e => setCnum(cnum - 1)}>이전<span style={{color:'rgba(0,0,0,0)'}}>3</span></div>
+                            <div className="modal-move-button" onClick={e => nextAndSetFont2()}>다음<span style={{color:'rgba(0,0,0,0)'}}>3</span></div>  
                         </div>
                     </ModalBox>
                     </OverflowScrolling>
@@ -797,7 +804,7 @@ function FirstQuestions({history}) {
                                 수정 가능하니 편하게 설정해 주세요 :)
                             </div>
                             <div className="modal-button-container">
-                                <div className="modal-move-button-back" onClick={e => setCnum(cnum - 2)}>이전</div>
+                                <div className="modal-move-button-back" onClick={e => setCnum(cnum - 2)}>이전<span style={{color:'rgba(0,0,0,0)'}}>5</span></div>
                                 {
                                     start ? 
                                     <Link to={{

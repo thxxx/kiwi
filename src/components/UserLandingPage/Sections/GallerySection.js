@@ -18,6 +18,7 @@ function GallerySection({content,setting}) {
                            { item.attachment ? 
                             <img 
                                 src={item.attachment} 
+                                //href="https://surfee.co.kr"
                                 style={{
                                     width:'100%',
                                     objectFit:'cover',
@@ -45,8 +46,19 @@ function GallerySection({content,setting}) {
                                display: 'flex', 
                                margin:'0px', 
                                padding:`${isMobile ? '5px' : '8px'}`}}>
+                                <div 
+                                    className="text-no-input" 
+                                    dangerouslySetInnerHTML={{__html:item.text}}
+                                    style={{
+                                        color:`${content.text.color}`,
+                                        textAlign:`${isMobile ? content.mobile.align : content.align}`,
+                                        fontSize:'0.9em',
+                                        fontFamily:`${setting.smallFont}`,
+                                    }}
+                                >
 
-                                <TextAuto 
+                                </div>
+                                {/* <TextAuto 
                                     small
                                     className="text-no-input" 
                                     placeholder="여기를 클릭하여 이미지에 대한 설명을 적어보세요."
@@ -55,7 +67,7 @@ function GallerySection({content,setting}) {
                                     color = {content.text.color} 
                                     align = {isMobile ? content.mobile.align : content.align}
                                     disabled
-                                />
+                                /> */}
                            </div>
                        }
                    </FeatureCard>
