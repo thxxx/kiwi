@@ -13,6 +13,7 @@ import time from '../../tools/img/sourcing/time.svg'
 import strategy from '../../tools/img/sourcing/strategy.svg'
 import support from '../../tools/img/sourcing/support.svg'
 import currency from '../../tools/img/sourcing/currency.svg'
+import car from '../../tools/img/sourcing/car.gif'
 
 function SourcingPage({history, isLoggedIn}) {
 
@@ -63,14 +64,14 @@ function SourcingPage({history, isLoggedIn}) {
                     </div>
                 </div>
                 <div className="mt-30 centero" style={{width:'100%'}}>
-                    <lottie-player
+                    {/* <lottie-player
                         autoplay
                         loop
                         mode="normal"
                         src="https://s3.amazonaws.com/cdnl.iconscout.com/lottie/premium/original/4042273.json?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4VMJAKC54WWWCYMY%2F20220405%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220405T024911Z&X-Amz-SignedHeaders=host&X-Amz-Expires=259200&X-Amz-Signature=d2238275c851d54b81e6c89611dde0b7af7ba3cbe270661325dc229eb476c738"
-                        style={{width:'30%', zIndex:'1'}}
+                        style={{width:'30%', zIndex:'1'}} 
                     >
-                    </lottie-player>
+                    </lottie-player> */}
                 </div>
                 <div style={{marginTop:'100px'}}>
                     <div className="s-small">
@@ -146,8 +147,7 @@ function SourcingPage({history, isLoggedIn}) {
                         )
                     }} style={{marginTop:'60px', borderRadius:'6px', color:'white'}}>
                         📝 지금 바로 의뢰하기<br/>
-
-                        <span style={{fontSize:'13px'}}>페이지 디자인부터 기획까지, 더 이상 고민하지 마세요.</span>
+                        <span style={{fontSize:'13px', color:'white'}}>페이지 디자인부터 기획까지, 더 이상 고민하지 마세요.</span>
                     </button>
                 </div>
             </div>

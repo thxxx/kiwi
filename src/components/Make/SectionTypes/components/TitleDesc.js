@@ -30,7 +30,9 @@ function TitleDesc({content, titlePlaceholder, descPlaceholder}) {
                             onChange={(event, editor) => {
                                 const data = editor.getData();
                                 action.setContents(produce(state.contents, draft => {
-                                    draft[state.secNum].title.text = data;
+                                    if(draft[state.secNum]){
+                                        draft[state.secNum].title.text = data;
+                                    }
                                 }))
                             }}
                         />
@@ -60,27 +62,6 @@ function TitleDesc({content, titlePlaceholder, descPlaceholder}) {
             {
                 content.desc.use &&
                 <div style={{width:'100%', marginTop:'10px'}}>
-                    {/* <TextareaAutosize 
-                        onClick={() => {
-                            action.setCategory(0);
-                            action.setFocus('desc');
-                        }}
-                        placeholder={descPlaceholder}
-                        className="text-input" 
-                        value={content.desc.text} 
-                        onChange={e => action.setContents(produce(state.contents, draft => {
-                            draft[state.secNum].desc.text = e.currentTarget.value;
-                        }))}
-                        style={{
-                            fontFamily:`${state.setting.smallFont}`, 
-                            color:`${content.desc.color}`, 
-                            fontSize:`${content.desc.size/19}em`, 
-                            // boxSizing:`border-box`, 
-                            textAlign:`${state.isPhone ? content.mobile.align : content.desc.align}`,
-                            resize:'none'
-                        }}
-                        spellCheck="false"
-                    /> */}
                     <div 
                         className={state.isPhone ? content.mobile.align === 'start' ? 'alignLeft' : 'alignCenter' : content.title.align === 'start' ? 'alignLeft' : 'alignCenter'}
                         style={{
@@ -99,7 +80,9 @@ function TitleDesc({content, titlePlaceholder, descPlaceholder}) {
                             onChange={(event, editor) => {
                                 const data = editor.getData();
                                 action.setContents(produce(state.contents, draft => {
-                                    draft[state.secNum].desc.text = data;
+                                    if(draft[state.secNum]){
+                                        draft[state.secNum].desc.text = data;
+                                    }
                                 }))
                             }}
                         />

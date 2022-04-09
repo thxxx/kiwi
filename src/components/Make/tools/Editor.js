@@ -139,67 +139,71 @@ const ALIGNMENT = {
 const Editor = (props) => {
     return (
         <div className="ckeditor-container">
-        <CKEditor
-        onInit={(editor) => {
-          editor.ui
-            .getEditableElement()
-            .parentElement.insertBefore(
-              editor.ui.view.toolbar.element,
-              editor.ui.getEditableElement()
-            );
-        }}
-        config={{
-            language: {ui: 'ko', content: "ko"},
-          plugins: [
-            Essentials,
-            Paragraph,
-            Bold,
-            Italic,
-            Underline,
-            Strikethrough,
-            Font,
-            List,
-            Link,
-            PasteFromOffice,
-            TextTransformation
-          ],
-          toolbar: props.toolbar
-            ? props.toolbar
-            : {
-              shouldNotGroupWhenFull:true,
-              items:[
-                "bold",
-                "italic",
-                "underline",
-                "strikethrough",
-                "|",
-                "fontSize",
-                "fontColor",
-                "fontBackgroundColor",
-                "link",
-              ]},
-          fontColor:FONTCOLOR,
-          fontBackgroundColor:FONTBACKGROUNDCOLOR,
-          fontSize: FONTSIZE,
-          alignment: ALIGNMENT,
-          typing: {
-            transformations: {
-              remove: [
-                "enDash",
-                "emDash",
-                "oneHalf",
-                "oneThird",
-                "twoThirds",
-                "oneForth",
-                "threeQuarters",
+          {
+            true && 
+            <CKEditor
+            onInit={(editor) => {
+              editor.ui
+                .getEditableElement()
+                .parentElement.insertBefore(
+                  editor.ui.view.toolbar.element,
+                  editor.ui.getEditableElement()
+                );
+            }}
+            config={{
+                language: {ui: 'ko', content: "ko"},
+              plugins: [
+                Essentials,
+                Paragraph,
+                Bold,
+                Italic,
+                Underline,
+                Strikethrough,
+                Font,
+                List,
+                Link,
+                PasteFromOffice,
+                TextTransformation
               ],
-            },
-          },
-        }}
-        editor={InlineEditor}
-        {...props}
-        placeholder={props.placeholder}
-        />
+              toolbar: props.toolbar
+                ? props.toolbar
+                : {
+                  shouldNotGroupWhenFull:true,
+                  items:[
+                    "bold",
+                    "italic",
+                    "underline",
+                    "strikethrough",
+                    "|",
+                    "fontSize",
+                    "fontColor",
+                    "fontBackgroundColor",
+                    "link",
+                  ]},
+              fontColor:FONTCOLOR,
+              fontBackgroundColor:FONTBACKGROUNDCOLOR,
+              fontSize: FONTSIZE,
+              alignment: ALIGNMENT,
+              typing: {
+                transformations: {
+                  remove: [
+                    "enDash",
+                    "emDash",
+                    "oneHalf",
+                    "oneThird",
+                    "twoThirds",
+                    "oneForth",
+                    "threeQuarters",
+                  ],
+                },
+              },
+            }}
+            editor={InlineEditor}
+            {...props}
+            data={props.data}
+            placeholder={props.placeholder}
+            />
+          }
         </div>
     )
 }
@@ -207,65 +211,68 @@ const Editor = (props) => {
 export const ButtonEditor =(props) => {
   return (
       <div className="ckeditor-container">
-      <CKEditor
-      onInit={(editor) => {
-        editor.ui
-          .getEditableElement()
-          .parentElement.insertBefore(
-            editor.ui.view.toolbar.element,
-            editor.ui.getEditableElement()
-          );
-      }}
-      config={{
-          language: {ui: 'ko', content: "ko"},
-        plugins: [
-          Essentials,
-          Paragraph,
-          Bold,
-          Italic,
-          Underline,
-          Strikethrough,
-          Font,
-          List,
-          Link,
-          PasteFromOffice,
-          TextTransformation
-        ],
-        toolbar: props.toolbar
-          ? props.toolbar
-          : {
-            shouldNotGroupWhenFull:true,
-            items:[
-              "bold",
-              "italic",
-              "underline",
-              "strikethrough",
-              "|",
-              "fontSize",
-              "fontColor",
-              "fontBackgroundColor",
-            ]},
-        fontColor:FONTCOLOR,
-        fontBackgroundColor:FONTBACKGROUNDCOLOR,
-        fontSize: FONTSIZE,
-        typing: {
-          transformations: {
-            remove: [
-              "enDash",
-              "emDash",
-              "oneHalf",
-              "oneThird",
-              "twoThirds",
-              "oneForth",
-              "threeQuarters",
-            ],
-          },
-        },
-      }}
-      editor={InlineEditor}
-      {...props}
-      placeholder={props.placeholder}
-      />
+        {
+          true && 
+          <CKEditor
+            onInit={(editor) => {
+              editor.ui
+                .getEditableElement()
+                .parentElement.insertBefore(
+                  editor.ui.view.toolbar.element,
+                  editor.ui.getEditableElement()
+                );
+            }}
+            config={{
+                language: {ui: 'ko', content: "ko"},
+              plugins: [
+                Essentials,
+                Paragraph,
+                Bold,
+                Italic,
+                Underline,
+                Strikethrough,
+                Font,
+                List,
+                Link,
+                PasteFromOffice,
+                TextTransformation
+              ],
+              toolbar: props.toolbar
+                ? props.toolbar
+                : {
+                  shouldNotGroupWhenFull:true,
+                  items:[
+                    "bold",
+                    "italic",
+                    "underline",
+                    "strikethrough",
+                    "|",
+                    "fontSize",
+                    "fontColor",
+                    "fontBackgroundColor",
+                  ]},
+              fontColor:FONTCOLOR,
+              fontBackgroundColor:FONTBACKGROUNDCOLOR,
+              fontSize: FONTSIZE,
+              typing: {
+                transformations: {
+                  remove: [
+                    "enDash",
+                    "emDash",
+                    "oneHalf",
+                    "oneThird",
+                    "twoThirds",
+                    "oneForth",
+                    "threeQuarters",
+                  ],
+                },
+              },
+            }}
+            editor={InlineEditor}
+            {...props}
+            placeholder={props.placeholder}
+            />
+        }
       </div>
   )
 }

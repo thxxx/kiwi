@@ -11,10 +11,6 @@ function FuncContentImg({text, value, func, removeFunc, subtext}) {
 
     return (
         <div className="edit-element">
-        {/* <ImageModal open={imageModalOpen} setOpen={setImageModalOpen} /> */}
-        {/* <div onClick={() => setImageModalOpen(true)}>
-            이미지를 찾아보실래요?
-        </div> */}
         <div className="top-img-div">
             <div style={{width:'80%'}}>
                 <div className="put-img-div" 
@@ -41,10 +37,21 @@ function FuncContentImg({text, value, func, removeFunc, subtext}) {
                 </div>
             </div>
             <div className="upload-div">
+                <div className="insta" onClick={() => {
+                    window.open(
+                        'https://striped-cabin-4bf.notion.site/549e0378f8024c5f9c79d432127dd974',
+                        '_blank'
+                    )
+                }}
+                style={{marginTop:'30px', width:'100%', textAlign:'center', fontSize:'13px'}}
+                >
+                    이미지 찾기가 어려우신가요?
+                </div>
                 <div className="upload-img-click"
-                onClick={inputClick}
-                onChange={e => func(e)}
-                id='attach'
+                    onClick={inputClick}
+                    onChange={e => func(e)}
+                    id='attach'
+                    style={{marginTop:'10px'}}
                 >
                     {
                         value ? `${text} 수정` : `${text} 업로드`

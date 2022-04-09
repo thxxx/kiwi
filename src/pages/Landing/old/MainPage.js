@@ -69,9 +69,9 @@ function MainPage({history}) {
                     코딩없이 랜딩페이지를 만들고 실시간 데이터 분석을 통해 <br/>
                     최고의 고객 전환율을 경험해 보세요.
                     </span>
-                    <button className="apply-button" onClick={scrollDown} style={{height:'60px', width:'200px', borderRadius:'10px', marginTop:'20px'}}>
+                    {/* <button className="apply-button" onClick={scrollDown} style={{height:'60px', width:'200px', borderRadius:'10px', marginTop:'20px'}}>
                         지금 바로 시작하기
-                    </button>
+                    </button> */}
                 </div>
                 <div className="main-section-right">              
                     <img src={section0} className="section-one-image-main" />

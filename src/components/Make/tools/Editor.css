@@ -38,10 +38,12 @@
     border-radius: 0px;
     border: 1px solid rgba(231, 0, 0, 0);
     padding:0px;
+    min-height:15px;
 }
 
 .ck-editor__editable{
     min-width:30px;
+    min-height:15px;
     padding:0px;
 }
 

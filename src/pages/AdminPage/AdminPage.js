@@ -28,7 +28,10 @@ function AdminPage({history}) {
         getMails()
         getSaved()
         getVoted()
-        emails.map(doc => console.log(doc.email))
+        setTimeout(() => {
+            console.log(saved.length, "갯수")
+            console.log(published.length, "갯수")
+        }, 2000)
     }, emails)
 
     const getThisPublished = async () => {
@@ -101,6 +104,9 @@ function AdminPage({history}) {
                                 let date = `${day.getMonth() + 1}월 ${day.getDate()}일 ${day.getHours()}시 ${day.getMinutes()}분`
                                 return(
                                     <div className="center-row" style={{margin:'10px'}} key={index}>
+                                    <Half>
+                                        번호 : {index}
+                                    </Half>
                                         <Half>
                                             url : {item.urlId}
                                         </Half>
@@ -131,6 +137,9 @@ function AdminPage({history}) {
                                 let date = `${day.getMonth() + 1}월 ${day.getDate()}일 ${day.getHours()}시 ${day.getMinutes()}분`
                                 return(
                                     <div className="center-row" style={{margin:'10px', flexWrap:'wrap', backgroundColor:'rgba(0,0,0,0.2)'}} key={index}>
+                                        <Half>
+                                            번호 : {index}
+                                        </Half>
                                         <Half>
                                             코멘트 : {item.comment}
                                         </Half>
@@ -182,6 +191,9 @@ function AdminPage({history}) {
                                     let date = `${day.getMonth() + 1}월 ${day.getDate()}일 ${day.getHours()}시 ${day.getMinutes()}분`
                                     return(
                                         <div className="center-row" style={{margin:'10px'}} key={index}>
+                                        <Half>
+                                            번호 : {index}
+                                        </Half>
                                             <Half>
                                                 url : {item.urlId}
                                             </Half>
@@ -208,7 +220,6 @@ function AdminPage({history}) {
                         <div>
                             {voted &&
                                 voted.map((item, index) => {
-                                    console.log(item)
                                     let day = new Date(item.created)
                                     let date = `${day.getMonth() + 1}월 ${day.getDate()}일 ${day.getHours()}시 ${day.getMinutes()}분`
                                     return(

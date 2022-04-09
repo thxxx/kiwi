@@ -19,7 +19,7 @@ function SelectCustom({options, onChange, value}) {
 
     return (
         <div>
-            <div className="select-open-button center-row" aria-describedby={id} variant="contained" onClick={handleClick}>
+            <div className="select-open-button center-row" aria-describedby={id} variant="contained" onClick={() => handleClick}>
                 <div className="select-button__content" style={{paddingLeft:'15px'}}>
                     {options.filter(doc => doc.value === value)[0].label}
                 </div>

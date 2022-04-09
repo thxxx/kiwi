@@ -46,7 +46,6 @@ const MakePageV2 = ({history, userObj}) => {
     // 데이터 베이스에 저장하지 않고 제작을 위해서만 사용되는 것들.
     const [secNum, setSecNum] = useState(52); // 현재 수정중인 페이지를 의미.
     const [loading, setLoading] = useState(false);
-    const [open, setOpen] = useState(false); // 첫 질문을 위한 Open
     const [editingId, setEditingId] = useState('')
     const [confirmMessage, setConfirmMessage] = useState('')
     const [callback, setCallback] = useState()
@@ -77,27 +76,31 @@ const MakePageV2 = ({history, userObj}) => {
     const [openConfirm, setOpenConfirm] = useState(false);
 
     // 피드백
-    const [feedback, setFeedback] = useState(lodash.cloneDeep(defaults.feedback));
-    const elementsRef = useRef([0,1,2,3,4,5,6,8,9,7,10,11,12,13,14,15].map(() => createRef()));
+    const elementsRef = useRef([0,1,2,3,4,5,6,8,9,7,10,11,12,13,14,15,16,17,18,19,20].map(() => createRef()));
 
     // 반복 실행되는 useEffect
     useEffect(() => {
-        function repeat(){
-            saveLocalStorage();
-        }
-        // 30초에 한번 씩 자동 저장
-        let id = setInterval(repeat, 10000);
-        return () => clearInterval(id);
-    })
+        console.log(contents)
+        setContents(contents)
+        // function repeat(){
+        //     saveLocalStorage();
+        // }
+        // // 30초에 한번 씩 자동 저장
+        // let id = setInterval(repeat, 10000);
+        // return () => clearInterval(id);
+    }, [contents])
 
     // 처음에 한번만 실행되는 useEffect
     useEffect(() => {
+        console.log("ㅊㅓ음 한번만")
+        
         // to report page view
         ReactGa.initialize('UA-213792742-1');
         ReactGa.pageview(`/make`);
         // 관리하기 페이지에서 state.item으로 내용을 가지고 넘어왔다.
         if(location.state !== undefined){
             if(location.state.now){
+                console.log("첫 제작으로 넘어옴")
                 setLoad(false);
                 loadLocalStorage()
                 setIsPhone(location.state.isPhone)
@@ -148,11 +151,10 @@ const MakePageV2 = ({history, userObj}) => {
             .get()
             .then(snapshot => ttem = {...snapshot.data(), id:snapshot.id});
 
-        console.log(ttem);
-
-        setOpen(false);
         setEditing(true);
         setEditingId(item);
+
+        console.log("check1")
         
         setContents(ttem.contents)
         setNavi(ttem.navi)
@@ -181,6 +183,8 @@ const MakePageV2 = ({history, userObj}) => {
             history.go()
         }else{
             ttem.setting.urlId = ''
+
+            console.log("check1")
     
             setContents(ttem.contents)
             setNavi(ttem.navi)
@@ -207,7 +211,7 @@ const MakePageV2 = ({history, userObj}) => {
         let tempSetting = savedPage[0].setting;
         tempSetting.urlId = location.state.urlId
 
-        console.log("여기까지는 왔다", savedPage)
+        console.log("check1")
 
         setContents(savedPage[0].contents)
         setNavi(savedPage[0].navi)
@@ -234,22 +238,16 @@ const MakePageV2 = ({history, userObj}) => {
     const loadLocalStorage = () => {
         setLoading(true);
         const temp = JSON.parse(localStorage.getItem('temp'));
+
+        console.log("check1")
+
         setContents(temp[0]);
         setNavi(temp[1]);
         setFoot(temp[2]);
         setSetting(temp[3]);
         setEditing(temp[4]);
-        setOpen(false);
         setLoading(false);
     }
-
-    const sectionsReturn = contents.map((item, index) => {
-        return(
-            <div style={{width:'100%'}}>
-                <NewSection setCategory={setCategory} content={item} key={index} index={index} secNum={secNum} isPhone={isPhone} setSecNum={setSecNum} contents={contents} setContents={setContents} full={full} setting={setting}/>
-            </div>
-        )
-    })
     
     // const isScroll = useCallback((scroll)=>{
     //     setScroll(scroll);
@@ -333,24 +331,27 @@ const MakePageV2 = ({history, userObj}) => {
                                 </div>
                             </div>
                         </div>}
-                            <div className="make-main-page-container" style={{borderRadius:`${isPhone ? '7px' : '0px'}`,fontSize:`${isPhone ? '22px' : '28px'}` }}>  
-                                {/* 네비게이션 */}
-                                {navi.use && <MakeNavigationV2 full={full} navi={navi} setNavi={setNavi} history={history} /> }
-                                
-                                {/* 섹션 디스플레이 */}
-                                
-                                {contents.map((item, index) => {
-                                    return(
-                                        <div style={{width:'100%'}}>
-                                            <NewSection elementRef={elementsRef.current[index]} setCategory={setCategory} content={item} key={index} index={index} secNum={secNum} isPhone={isPhone} setSecNum={setSecNum} contents={contents} setContents={setContents} full={full} setting={setting}/>
-                                        </div>
-                                    )
-                                })}
-                                {/* 푸터 */}
-                                {foot.use && 
-                                <MakeFooterV2 full={full} history={history} foot={foot} setFoot={setFoot} /> 
-                                }                             
-                            </div>
+                            {
+                                contents &&
+                                <div className="make-main-page-container" style={{borderRadius:`${isPhone ? '7px' : '0px'}`,fontSize:`${isPhone ? '22px' : '28px'}` }}>  
+                                    {/* 네비게이션 */}
+                                    {navi.use && <MakeNavigationV2 full={full} navi={navi} setNavi={setNavi} history={history} /> }
+                                    
+                                    {/* 섹션 디스플레이 */}
+                                    
+                                    {contents.map((item, index) => {
+                                        return(
+                                            <div style={{width:'100%'}}>
+                                                <NewSection elementRef={elementsRef.current[index]} setCategory={setCategory} content={item} key={index} index={index} secNum={secNum} isPhone={isPhone} setSecNum={setSecNum} contents={contents} setContents={setContents} full={full} setting={setting}/>
+                                            </div>
+                                        )
+                                    })}
+                                    {/* 푸터 */}
+                                    {foot.use && 
+                                    <MakeFooterV2 full={full} history={history} foot={foot} setFoot={setFoot} /> 
+                                    }                             
+                                </div>
+                            }
                             <>
                             {  ( setting.fta.use ) &&
                             <div className="fta__container" style={{width:`${full ? '100vw' : isPhone ? '26vw' : '70vw'}`, fontSize:`${isPhone ? '22px' : '28px'}`}}>

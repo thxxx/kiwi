@@ -81,42 +81,30 @@
     letter-spacing: -0.02em;
     font-weight: 800;
 }
+
 .footer{
-    background-color: rgb(245, 245, 245);
-    border-top:1px solid rgb(230,230,230);
+    background-color: rgb(255, 255, 255);
     height:250px;
+    padding-top:40px;
     display: flex;
-    justify-content : start;
-    align-items : start;
+    justify-content : center;
+    align-items : center;
     color:rgb(44, 44, 44);
     font-weight:400;
-    flex-direction: row;
+    flex-direction: column;
     width:100%;
     box-sizing: border-box;
     font-size:14px;
+    font-family: Pretendard;
 }
 
 .footer-item{
   margin-top:7px;
   width:100%;
   display: flex;
-  justify-content : end;
+  justify-content : start;
   align-items : end;
 }
-
-
-.footer-more{
-    width:100%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content :start;
-    align-items : center;
-    height: 100%;
-    box-sizing: border-box;
-    padding:5vh 8vw;
-  }
-
 .footer-text-click{
     color:rgb(131, 131, 131);
     text-decoration: none;  

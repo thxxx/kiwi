@@ -5,10 +5,6 @@ import {Link} from 'react-router-dom'
 import invoice from '../../tools/img/main/invoice.webp'
 import tablet from '../../tools/img/main/tablet.webp'
 
-const Card = styled('div')`
-    
-`
-
 const StyledModal = styled(ModalUnstyled)`
   position: fixed;
   z-index: 1300;
@@ -60,6 +56,7 @@ function ChoiceModal({open, setOpen, newTab}) {
                     </div>
                     {
                         newTab ?
+                        <>
                         <div className="centero" style={{flexDirection:'row', marginTop:'20px'}}>
                             <button onClick={() => window.open('https://surfee.co.kr/surfeeexamples', '_blank')} className="main__button5 uphover" style={{width:'190px', display:'flex', flexDirection:'column', padding:'18px 10px'}}>
                                 <img src={tablet} style={{width:'80%'}} />
@@ -70,10 +67,16 @@ function ChoiceModal({open, setOpen, newTab}) {
                             <button onClick={() => window.open('https://surfee.co.kr/sourcing', '_blank')} className="main__button5 uphover" style={{width:'190px', display:'flex', flexDirection:'column', padding:'18px 10px'}}>
                                 <img src={invoice} style={{width:'80%'}} />
                                 <div style={{textAlign:'center', color:'black', fontWeight:'500'}}>
-                                    <strong>의뢰서만 작성</strong>하고<br/>Surfee에게 <strong>제작 의뢰</strong>하기
+                                    <strong>의뢰서만 작성</strong>하고<br/>전문가에게 <strong>제작 의뢰</strong>하기
                                 </div>
                             </button>  
                         </div>
+                        {/* <button className="main__button5 uphover" style={{width:'90%', display:'flex', flexDirection:'column', padding:'18px 10px'}}>
+                            <div style={{textAlign:'center', color:'black', fontWeight:'500'}}>
+                                불편함 제보하기
+                            </div>
+                        </button>   */}
+                        </>
                         :
                         <div className="centero" style={{flexDirection:'row', marginTop:'20px'}}>
                             <Link to='surfeeexamples' className="main__button5 uphover" style={{width:'190px', display:'flex', flexDirection:'column', padding:'18px 10px'}}>
@@ -85,7 +88,7 @@ function ChoiceModal({open, setOpen, newTab}) {
                             <Link to='/sourcing' className="main__button5 uphover" style={{width:'190px', display:'flex', flexDirection:'column', padding:'18px 10px'}}>
                                 <img src={invoice} style={{width:'80%'}} />
                                 <div style={{textAlign:'center', color:'black', fontWeight:'500'}}>
-                                    <strong>의뢰서만 작성</strong>하고<br/>Surfee에게 <strong>제작 의뢰</strong>하기
+                                    <strong>의뢰서만 작성</strong>하고<br/>전문가에게 <strong>제작 의뢰</strong>하기
                                 </div>
                             </Link>  
                         </div>

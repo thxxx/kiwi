@@ -14,6 +14,7 @@ import MiniModal from '../../../tools/MiniModal';
 import { v4 as uuidv4 } from 'uuid';
 import {Settings} from '@styled-icons/ionicons-sharp'
 import {DocumentOnePage} from '@styled-icons/fluentui-system-filled'
+import {SendPlane} from '@styled-icons/remix-fill'
 import lodash from 'lodash'
 import "@lottiefiles/lottie-player";
 import produce from 'immer'
@@ -36,6 +37,7 @@ const NavBarInMakePage = ({history, userObj, full, setFull, isPhone, setIsPhone,
     const [tutorialOpen, setTutorialOpen] = useState(false);
     const [saveOpen, setSaveOpen] = useState(false);
     const [saveLoading, setSaveLoading] = useState(false);
+    const [publishLoading, setPublishLoading] = useState(false);
     const [miniOpen, setMiniOpen] = useState(false)
 
     useEffect(() => {
@@ -328,21 +330,83 @@ const afterSaveImage = async (returned) => {
         }else{
             return
         }
-        // saveLocalStorage()
-        // if(userObj === null){
-        //     alert("로그인 하셔야 저장 후 배포하실 수 있습니다.");
-        //     setLoginModal(true);
-        // }else{
-        //     setLoading(true);        
-        //     const returned = await saveImages();
-        //     saveLocalStorage();
-        //     await afterSaveImage(returned);
-        //     setTimeout(() => {
-        //         setLoading(false);
-        //         history.push('/#/response');
-        //         history.go();
-        //     },200)
-        // }
+    }
+
+    
+    const doPublish = async () => {
+        setPublishLoading(true)
+
+        saveLocalStorage()
+
+        if(userObj === null){
+            alert("로그인 하셔야 저장 후 배포하실 수 있습니다.");
+            setLoginModal(true);
+        }else{
+            setSaveLoading(true);
+            setTimeout(async () => {
+                saveLocalStorage();
+                const returned = await saveImages();
+                await afterSaveImage(returned);
+                setSaveLoading(false);
+
+                const saveDatas = await dbService
+                .collection("saved-page")
+                .where("urlId", "==", setting.urlId)
+                .get(); // uid를 creatorId로 줬었으니까.
+
+                let saveData = saveDatas.docs.map(doc => {
+                    return({...doc.data(), id:doc.id})
+                });
+
+                let content = saveData[0]
+
+                console.log(content, "컨텐츠")
+
+                const urlDatas = await dbService
+                .collection("published-page")
+                .where("urlId", "==", content.urlId)
+                .get(); // uid를 creatorId로 줬었으니까.
+                
+                let urlData = urlDatas.docs.map(doc => {
+                    return({...doc.data(), id:doc.id})
+                });
+                
+                if(urlData.length > 0 && urlData[0].pageId !== content.id ){
+                    alert("url을 변경한 후 배포해주시기 바랍니다.");
+                    return;
+                }
+
+                await dbService
+                    .collection('published-page')
+                    .where('pageId', "==", content.id)
+                    .get().then( async querySnapshot => 
+                        { 
+                            if(querySnapshot.empty){
+                                let body = {
+                                    ...content,
+                                    pageId:content.id,
+                                    created:Date.now(),
+                                }
+                                await dbService.collection('published-page').add(body)
+                                setPublishLoading(false)
+                                alert("배포 완료되었습니다.")
+                            }else{
+                                let body = {
+                                    ...content,
+                                    created:Date.now(),
+                                }
+                                querySnapshot.forEach(async (doc) => {
+                                    await dbService.doc(`published-page/${doc.id}`).update(body).then(() => {
+                                        setPublishLoading(false)
+                                        alert("배포 완료되었습니다.")
+                                    })
+                                });
+                            }
+                        }
+                    )
+
+            }, 250)
+        }
     }
 
     const deviceSelect = () => {
@@ -417,7 +481,7 @@ const afterSaveImage = async (returned) => {
                     }} >
                         페이지 구성 <DocumentOnePage size="16" style={{ marginLeft:'5px'}} />
                     </span>
-                    <span className="make-nav-button" onClick={e => setTutorialOpen(true)} style={{boxShadow:'none', width:'180px', color:'#6C63FF', fontWeight:'700'}}>
+                    <span className="make-nav-button" onClick={e => setTutorialOpen(true)} style={{boxShadow:'none', width:'180px', color:'#6C63FF', border:'none', fontWeight:'700'}}>
                         사용이 어려우신가요 ?
                     </span>
                 </div>
@@ -432,6 +496,9 @@ const afterSaveImage = async (returned) => {
                     {deviceSelect()}
                     <Button fontSize="14px" colorScheme='#6c63ff' isLoading={saveLoading} onClick={() => onSubmit()} className="default-button-02">
                         저장하기
+                    </Button>
+                    <Button leftIcon={<SendPlane color="white" size="15" />} fontSize="14px" colorScheme='#6c63ff' isLoading={publishLoading} onClick={() => doPublish()} className="default-button-02">
+                        배포하기
                     </Button>
                     <Button fontSize="14px" variant='outline' colorScheme='#6c63ff' onClick={() => goSetup()} className="default-button-01 opacity-hover" style={{margin:'0px 5px'}}>
                         관리페이지

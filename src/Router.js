@@ -1,9 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
-import LoginPage from './pages/Login/Login/LoginPage'
 import UserLandingPage from './pages/UserLanding/UserLandingPage';
-import MainPageV2 from './pages/Landing/MainPageV2';
 import MainPageV3 from './pages/Landing/MainPageV3';
 import MakePageV2 from './pages/Make/MakePageV2';
 import AdminPage from './pages/AdminPage/AdminPage';
@@ -29,19 +27,6 @@ const AppRouter = ({userObj, isLoggedIn}) => {
         action : {},
     }
 
-    // if (window.location.host.split(".")[0] !== "surfee" && window.location.host.split(".")[0] !== 'localhost:3000') {
-    //     return(
-    //         <Router history={history}>
-    //             <>
-    //             <div className="Container" style={{ minHeight: 'calc(100vh - 80px)', zIndex:-1 }}>
-    //                 <Switch>
-    //                     <Route path="/" component={UserLandingPage} />
-    //                 </Switch>
-    //             </div>
-    //             </> 
-    //         </Router>
-    //     )
-    // }else{
         return(
             <Router history={history}>
                 <UserContext.Provider value={contextValue}>
@@ -53,9 +38,6 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             </Route>
                             <Route exact path="/" onUpdate={() => window.scrollTo(0, 0)}>
                                 <MainPageV3 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
-                            </Route>
-                            <Route exact path="/oldoldoldold" onUpdate={() => window.scrollTo(0, 0)}>
-                                <MainPageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
                             </Route>
                             <Route path="/response" onUpdate={() => window.scrollTo(0, 0)}>
                                 <ResponsePage history={history} userObj={userObj}/> 
@@ -89,6 +71,9 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             </Route>
                             <Route
                                 path="/:id"
+                                render={(props) => <UserLandingPage {...props} />}/>
+                            <Route
+                                path="*"
                                 render={(props) => <UserLandingPage {...props} />}/>
                         </Switch>
                     </div>

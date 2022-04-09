@@ -1,6 +1,7 @@
 import React, {useEffect,useRef, useState} from 'react'
 import './old/MainPage.css'
 import './MainPageV3.css'
+import './MainPageV2.css'
 import {Link} from 'react-router-dom';
 import Footer from '../NavAndFooter/Footer'
 import NavBarV2 from '../NavAndFooter/NavBarV2'
@@ -75,22 +76,28 @@ function MainPageV3({history, isLoggedIn, userObj}) {
                     <Link to='/response' className="main__button6 uphover">
                         지금 바로 시작하기
                     </Link>
-                    <button className="main__button5 uphover" 
-                        style={{padding:'18px 30px'}} 
-                        onClick={() => setChoiceOpen(true)}>
-                        더 쉽게 시작하기
-                    </button>
+                    {
+                        !isMobile && 
+                        <button className="main__button5 uphover" 
+                            style={{padding:'18px 30px'}} 
+                            onClick={() => setChoiceOpen(true)}>
+                            더 쉽게 시작하기
+                        </button>
+                    }
                 </>
                 :
                 <>
                     <button className="main__button6 uphover" onClick={() => setAskOpen(true)}>
                         지금 바로 시작하기
                     </button>
-                    <button className="main__button5 uphover" 
-                        style={{padding:'18px 30px'}} 
-                        onClick={() => setChoiceOpen(true)}>
-                        더 쉽게 시작하기
-                    </button>
+                    {
+                        !isMobile && 
+                        <button className="main__button5 uphover" 
+                            style={{padding:'18px 30px'}} 
+                            onClick={() => setChoiceOpen(true)}>
+                            더 쉽게 시작하기
+                        </button>
+                    }
                 </>
             }
         </div>)
@@ -114,22 +121,28 @@ function MainPageV3({history, isLoggedIn, userObj}) {
                     <Link to='/response' className="main__button4 uphover">
                         지금 바로 시작하기
                     </Link>
-                    <button className="main__button5 uphover" 
-                        style={{padding:'18px 30px'}} 
-                        onClick={() => setChoiceOpen(true)}>
-                        더 쉽게 시작하기
-                    </button>
+                    {
+                        !isMobile && 
+                        <button className="main__button5 uphover" 
+                            style={{padding:'18px 30px'}} 
+                            onClick={() => setChoiceOpen(true)}>
+                            더 쉽게 시작하기
+                        </button>
+                    }
                 </>
                 :
                 <>
                     <button className="main__button4 uphover" onClick={() => setAskOpen(true)}>
                         지금 바로 시작하기
                     </button>
-                    <button className="main__button5 uphover" 
-                        style={{padding:'18px 30px'}} 
-                        onClick={() => setChoiceOpen(true)}>
-                        더 쉽게 시작하기
-                    </button>
+                    {
+                        !isMobile && 
+                        <button className="main__button5 uphover" 
+                            style={{padding:'18px 30px'}} 
+                            onClick={() => setChoiceOpen(true)}>
+                            더 쉽게 시작하기
+                        </button>
+                    }
                 </>
             }
         </div>)

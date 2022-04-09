@@ -5,12 +5,6 @@ import {Check} from '@styled-icons/bootstrap';
 export const EditCheckbox = ({value, func}) => {
     return(
         <>
-        {/* <Checkbox
-            checked={value || false}
-            value={value || false}
-            onClick={func}
-            inputProps={{ 'aria-label': 'controlled' }}
-        /> */}
         <div className={value ? 'custom-check' : 'custom-check cc-unclicked'}>
             <Check color='white' />
         </div>
