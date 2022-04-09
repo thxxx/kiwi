@@ -16,10 +16,6 @@ function FuncFaviconImg({text, value, func, subtext}) {
                     id='attach'
                     style={{backgroundImage: `url(${value}`, backgroundSize:'cover', backgroundRepeat: 'no-repeat'}}
                     >
-                    {/* <div 
-                        className="img-remove"
-                        onClick={ e => removeFunc(e) }
-                    >X</div> */}
                     <input
                         type="file" 
                         accept="image/*" 

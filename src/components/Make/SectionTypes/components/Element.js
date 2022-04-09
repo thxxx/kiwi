@@ -77,13 +77,13 @@ function Element({content, item, index, gallery}) {
                 /> 
             </div> : 
             <>
-            <Popover
-                style={{zIndex: 6, position: 'relative'}}
-                placement='top'
-                closeOnBlur={false}
-                isOpen={open[index]}
-                onClose={() => handleClose(index)}>
-            <PopoverTrigger>
+                <Popover
+                    style={{zIndex: 6, position: 'relative'}}
+                    placement='top'
+                    closeOnBlur={false}
+                    isOpen={open[index]}
+                    onClose={() => handleClose(index)}>
+                <PopoverTrigger>
                     <div className="feature-upload-button border-hover" style={{borderRadius:`${content.element.iconBorder}px`, backgroundColor:`${content.element.backgroundColor}`}} onClick={() => handleClick(index)}>
                         {item.icon ? 
                             <>{returnIcon(item.icon)}</> 
@@ -91,18 +91,17 @@ function Element({content, item, index, gallery}) {
                             <Upload size="25" />
                         }
                     </div>
-            </PopoverTrigger>
-            <PopoverContent style={{zIndex:1900}}>
-                <PopoverArrow />
-                <PopoverHeader>아이콘을 선택하세요.</PopoverHeader>
-                <PopoverBody>
-                    <IconTable func={ e => action.setContents(produce(state.contents, draft => {
-                        draft[state.secNum].elements[index].icon = e;
-                    })) } handleClose={() => handleClose(index)} />
-                </PopoverBody>
-            </PopoverContent>
-            </Popover>
-                
+                </PopoverTrigger>
+                <PopoverContent style={{zIndex:1900}}>
+                    <PopoverArrow />
+                    <PopoverHeader>아이콘을 선택하세요.</PopoverHeader>
+                    <PopoverBody>
+                        <IconTable func={ e => action.setContents(produce(state.contents, draft => {
+                            draft[state.secNum].elements[index].icon = e;
+                        })) } handleClose={() => handleClose(index)} />
+                    </PopoverBody>
+                </PopoverContent>
+                </Popover>
             </>
             }
         </div> 

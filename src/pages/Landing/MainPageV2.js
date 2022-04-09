@@ -1,6 +1,4 @@
 import React, {useEffect,useRef, useState} from 'react'
-import './old/MainPage.css'
-import './MainPageV2.css'
 import {Link} from 'react-router-dom';
 import { dbService } from '../../tools/fbase'
 import Footer from '../NavAndFooter/Footer'

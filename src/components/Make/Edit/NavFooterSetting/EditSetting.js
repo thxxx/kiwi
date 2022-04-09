@@ -24,7 +24,7 @@ import {
   } from '@chakra-ui/react'
 import './Fonts.css'
 
-const fontOptions = [
+export const fontOptions = [
     { label: 'Gmarket Sans', value: 'GmarketSansBold' },
     { label: 'Neo 둥근모', value: 'NeoDunggeunmo' },
     { label: 'Noto Sans KR', value: 'Noto Sans KR' },
@@ -436,6 +436,12 @@ function EdtiSetting({setting, setSetting, category, setContents}) {
 
     return(
         <>
+        <div style={{padding:'0px 10px', fontSize:'15px'}}>
+            <div style={{padding:'7px 11px', backgroundColor:'rgba(0,0,0,0.1)', borderRadius:'6px'}}>
+                <span style={{color:'#6C63FF', fontWeight:'700'}}>기본</span> - 외부에 보여지는 페이지 기본 정보를 설정가능합니다.<br/>
+                <span style={{color:'#6C63FF', fontWeight:'700'}}>디자인</span> - 버튼 디자인, 폰트 등을 설정가능합니다.
+            </div>
+        </div>
             {returnTable()}
         </>
     )

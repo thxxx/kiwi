@@ -37,7 +37,7 @@
 .border{
     border: 1px solid var(--edit-main-border-color);
 }
-
+ 
 .edit-element__one{
     display: flex;
     justify-content: start;
@@ -76,7 +76,7 @@
 
 .edit-element__right{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items : center;
     /* padding:10px 10px 10px 10px; */
     width:100%;

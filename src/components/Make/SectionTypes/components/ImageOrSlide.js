@@ -131,7 +131,7 @@ function ImageOrSlide({content}){
             // 목업 - 모바일
             if(content.mockup.type === 'mobile' && content.contents.type === 'mockup' )
                 return( 
-                <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={inputClick}>
+                <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={() => inputClick}>
                     <input
                         ref={photoInput}
                         style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
@@ -151,7 +151,7 @@ function ImageOrSlide({content}){
             // 목업 - 데스크탑
             if(content.mockup.type === 'desktop' && content.contents.type === 'mockup' )
                 return(
-                    <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={inputClick}>
+                    <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={() => inputClick}>
                         <input
                         ref={photoInput}
                         style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
@@ -173,7 +173,7 @@ function ImageOrSlide({content}){
         if(content.mockup.type === 'mobile2' && content.contents.type === 'mockup')
             return( 
                 <>
-                <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={inputClick}>
+                <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={() => inputClick}>
                     <input
                         ref={photoInput}
                         style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
@@ -190,7 +190,7 @@ function ImageOrSlide({content}){
                         left:`${imageLeft()}%`}} />
                     }         
             </div>
-            <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={inputClick}>
+            <div className="mock-container" id="attach" onChange = {e => upload_mockup(e)} onClick={() => inputClick}>
                     <input
                         ref={photoInput}
                         style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}

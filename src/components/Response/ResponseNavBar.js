@@ -14,8 +14,8 @@ function ResponseNavBar() {
                 <div style={{fontWeight: '600', fontSize:'0.8em'}}>관리 페이지</div>
                 <span className="make-nav-button" onClick={e => {
                     setTutorialOpen(true);
-                }} style={{boxShadow:'none', width:'110px', fontSize:'0.8em', marginLeft:'30px', color:'black', fontWeight: '500'}}>
-                    사용 방법 <QuestionCircle size="13" color="rgba(0,0,0,0.5)" style={{marginLeft:'4px'}} />
+                }} style={{boxShadow:'none', color:'#6c63ff', width:'110px', fontSize:'0.8em', border:'none', marginLeft:'30px', color:'black', fontWeight: '500'}}>
+                    사용 방법
                 </span>
             </div>
             <Link to="/" className="response-nav-triple">Surfee</Link>

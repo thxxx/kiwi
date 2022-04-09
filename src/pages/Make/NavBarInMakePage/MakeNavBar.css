@@ -35,15 +35,16 @@
 .make-nav-button{
     background-color:rgba(0,0,0,0);
     color:rgba(105,105,105,1);
-    border-radius: 25px;
+    border-radius: 6px;
     display: flex;
     align-items:center;
     justify-content:center;
     width:120px;
     height: 40px;
-    margin: 5px;
+    margin: 5px 5px 0px 5px;
     cursor: pointer;
     box-shadow: var(--non-hover-button-shadow);
+    border:1px solid rgba(0,0,0,0.3);
 }
 
 .make-nav-button:hover{

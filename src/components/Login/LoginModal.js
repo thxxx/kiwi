@@ -8,6 +8,7 @@ import { dbService } from '../../tools/fbase'
 import { Input } from 'antd';
 import googlelogo from '../../tools/img/googlelogo.png'
 import './LoginModal.css'
+import '../../pages/Login/Login/LoginRegister.css'
 
 const StyledModal = styled(ModalUnstyled)`
   position: fixed;

@@ -5,10 +5,7 @@ import Footer from '../../../pages/NavAndFooter/Footer'
 import './SubmitPage.css'
 
 function SubmitPage() {
-
-    useEffect(() => {
-    })
-
+    
     return (
         <div className="after-page-one-container">
             <NavBarV2 />

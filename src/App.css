@@ -105,7 +105,7 @@
   --default-shadow-01: 2px 4px 20px #E8F0F9;
   --default-shadow-02: 2px 4px 20px #c9c9c9;
   --non-hover-button-shadow: 2px 4px 20px #E5E5E5;
-  --br-01: 25px;
+  --br-01: 6px;
   --br-02:32px;
   --main-gradient:linear-gradient(180deg, #9281FF 0%, #6C63FF 100%);
   --main-shadow-01:4px 4px 15px #D0CDFF;
@@ -155,13 +155,6 @@
   color: #61dafb;
 }
 
-.insta{
-  color:rgb(131, 131, 131);
-  text-decoration: none;
-}
-.insta:hover{
-  color:rgb(50,50,50);
-}
 .border-hover{
   box-sizing: content-box;
   border:1px solid #00000000;

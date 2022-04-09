@@ -71,9 +71,13 @@ const enableCKEWebpackConfigPlugin = (webpackConfig, { env, paths }) => {
   return webpackConfig;
 };
 module.exports = {
+  devServer:{
+    historyApiFallback: true
+  },
   webpack: {
     alias: {},
     plugins: [
+      
     ],
     configure: (webpackConfig, { env, paths }) => {
         webpackConfig.plugins.push(new CKEditorWebpackPlugin({ language: "ko", addMainLanguageTranslationsToAllAssets: true}));
@@ -81,3 +85,4 @@ module.exports = {
     }
   }
 }
+
