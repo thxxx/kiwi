@@ -553,6 +553,9 @@ function FirstQuestions({history}) {
                                 <div className="modal-fc-select-title">
                                     글씨체
                                 </div>
+                                <div className="modal-fc-select-title" style={{fontSize:'12px', color:'rgba(0,0,0,0.7)'}}>
+                                    전체 폰트를 로딩하는데 약간의 시간이 소요될 수 있습니다.
+                                </div>
                                 {/*추가*/}
                             
               

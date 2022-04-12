@@ -89,7 +89,7 @@ function UserSection({content, setting}) {
             <div className="section__container" 
             style={{
                 backgroundImage:`${ content.backgroundType === 'image' ? `url(${content.backgroundImage.attachment})` : ''}`, backgroundSize:'cover', backgroundRepeat: 'no-repeat', 
-                backgroundAttachment:`${content.backgroundImage.fixed ? 'fixed' : 'scroll'}`
+                backgroundAttachment:`${!isMobile && content.backgroundImage.fixed ? 'fixed' : 'scroll'}`
             }}>
             {
                 content.backgroundType === 'color' ?

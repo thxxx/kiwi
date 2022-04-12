@@ -11,9 +11,7 @@ import Strikethrough from "@ckeditor/ckeditor5-basic-styles/src/strikethrough";
 import Link from "@ckeditor/ckeditor5-link/src/link";
 import PasteFromOffice from "@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice";
 import Font from "@ckeditor/ckeditor5-font/src/font";
-import FontFamily from "@ckeditor/ckeditor5-font/src/fontfamily";
 import List from "@ckeditor/ckeditor5-list/src/list";
-import Alignment from "@ckeditor/ckeditor5-alignment/src/alignment";
 import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformation";
 // import Base64UploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter";
 import './Editor.css'

@@ -12,6 +12,10 @@ import VotePage from './pages/VotePage/VotePage'
 import FirstQuestions from './pages/Questions/FirstQuestions'
 import ExamplePage from './pages/ExamplePage/ExamplePage'
 import SourcingPage from './pages/Sourcing/SourcingPage'
+import GiftPage from './pages/EventPage/GiftPage/GiftPage'
+import GiftMake from './pages/EventPage/GiftPage/GiftMake'
+import GiftEnd from './pages/EventPage/GiftPage/GiftEnd'
+import GiftBox from './pages/EventPage/GiftPage/GiftBox'
 import ScrollToTop from './tools/ScrollToTop'
 import { createBrowserHistory } from 'history';
 const history = createBrowserHistory();
@@ -69,6 +73,17 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             <Route path="/sourcing" onUpdate={() => window.scrollTo(0, 0)}>
                                 <SourcingPage history={history} isLoggedIn={isLoggedIn}/>
                             </Route>
+                            <Route path="/giftevent" onUpdate={() => window.scrollTo(0, 0)}>
+                                <GiftPage history={history} isLoggedIn={isLoggedIn}/>
+                            </Route>
+                            <Route path="/giftmake" onUpdate={() => window.scrollTo(0, 0)}>
+                                <GiftMake history={history} isLoggedIn={isLoggedIn}/>
+                            </Route>
+                            <Route path="/giftend" onUpdate={() => window.scrollTo(0, 0)}>
+                                <GiftEnd history={history} isLoggedIn={isLoggedIn}/>
+                            </Route>
+                            <Route path="/giftbox/:id"
+                                render={(props) => <GiftBox {...props} />}/>
                             <Route
                                 path="/:id"
                                 render={(props) => <UserLandingPage {...props} />}/>
