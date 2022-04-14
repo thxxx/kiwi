@@ -21,6 +21,7 @@ function AdminPage({history}) {
     const [emails, setEmails] = useState([]);
     const [saved, setSaved] = useState([]);
     const [voted, setVoted] = useState([]);
+    const [password, setPassword] = useState('');
 
     useEffect(() => {
         getThisPublished()
@@ -245,6 +246,18 @@ function AdminPage({history}) {
     }
 
     return (
+        password !== 'abcdefghijklmnoppp' ?
+        <div className="centero" style={{width:'100vw', height:'100vh', flexDirection:'column'}}>
+            <input value={password} onChange={e => setPassword(e.currentTarget.value)} />
+            <button onClick={() => {
+                if(password === 'pass'){
+                    setPassword('abcdefghijklmnoppp')
+                }else{
+                    alert('비밀공간입니다!')
+                }
+            }}>비밀번호 입력</button>
+        </div>
+        :
         <div>
             <div className="center-row" style={{zIndex:'2000'}}>
                 <RadioButton  onClick={() => setType(0)}>

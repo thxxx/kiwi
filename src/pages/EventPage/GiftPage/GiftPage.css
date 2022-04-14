@@ -74,6 +74,48 @@
     border-bottom:1.7px solid black;
 }
 
+.gift__gift-container{
+    margin:10px 0px;
+    border-radius:6px;
+    box-shadow:5px 8px 10px rgba(138, 138, 138, 0.226);
+    background-color:white;
+    width:100%;
+}
+
+.gift__code-input{
+    width:90%;
+    margin:15px 0px;
+    font-size:0.9em;
+    padding:5px;
+    border-bottom:1px solid black;
+    background-color:rgba(0,0,0,0);
+    border:1px solid rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.gift__code-input:focus{
+    outline:none;
+    border:1px solid rgba(24, 149, 30, 0.787);
+}
+
+.gift__input-info{
+    background-color:rgba(0,0,0,0);
+    border:none;
+    /* border-bottom:1px solid black; */
+    padding:5px;
+    font-size:0.8em;
+    width:90%;
+    text-align: center;
+    border-radius: 3px 3px 0px 0px;
+    margin:10px 0px;
+    font-family: 'MapoGoldenPier';
+    font-weight:700;
+}
+
+.gift__input-info:focus{
+    outline:none;
+}
+
 .gift__radio{
     border-radius: 6px;
     padding:10px;
@@ -177,6 +219,27 @@
 
 .gift__letter-input:focus{
     outline:none;
+}
+
+.gift__box-element{
+    background:rgba(255,255,255,0.8);
+    border-radius:6px;
+    box-sizing:border-box;
+    margin:5px 0px;
+    padding:15px 10px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gift__img-box{
+    margin:7px;
+    background-color: #06113C;
+    border-radius: 6px;
+    width:27%;
+    cursor: pointer;
 }
 
 @media screen and (max-width:800px){
