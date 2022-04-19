@@ -16,6 +16,7 @@ import GiftPage from './pages/EventPage/GiftPage/GiftPage'
 import GiftMake from './pages/EventPage/GiftPage/GiftMake'
 import GiftEnd from './pages/EventPage/GiftPage/GiftEnd'
 import GiftBox from './pages/EventPage/GiftPage/GiftBox'
+import ContestPage from './pages/EventPage/ContestPage/ContestPage'
 import ScrollToTop from './tools/ScrollToTop'
 import { createBrowserHistory } from 'history';
 const history = createBrowserHistory();
@@ -43,7 +44,7 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             <Route exact path="/" onUpdate={() => window.scrollTo(0, 0)}>
                                 <MainPageV3 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
                             </Route>
-                            <Route path="/response" onUpdate={() => window.scrollTo(0, 0)}>
+                            {/* <Route path="/response" onUpdate={() => window.scrollTo(0, 0)}>
                                 <ResponsePage history={history} userObj={userObj}/> 
                             </Route>
                             <Route path="/submit">
@@ -53,7 +54,7 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                                 path="/make" 
                                 onUpdate={() => window.scrollTo(0, 0)}>
                                 <MakePageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
-                            </Route>
+                            </Route> */}
                             {/* <Route 
                                 path="/make/:code" 
                                 onUpdate={() => window.scrollTo(0, 0)}
@@ -84,6 +85,9 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             </Route>
                             <Route path="/giftbox/:id"
                                 render={(props) => <GiftBox {...props} />}/>
+                            <Route path="/surfeecontest" onUpdate={() => window.scrollTo(0, 0)}>
+                                <ContestPage history={history} isLoggedIn={isLoggedIn}/>
+                            </Route>
                             <Route
                                 path="/:id"
                                 render={(props) => <UserLandingPage {...props} />}/>

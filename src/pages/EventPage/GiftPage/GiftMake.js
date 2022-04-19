@@ -5,14 +5,16 @@ import letter1 from '../../../tools/img/gift/letter1.webp'
 import letter2 from '../../../tools/img/gift/letter2.webp'
 import letter3 from '../../../tools/img/gift/letter3.jpg'
 import letter4 from '../../../tools/img/gift/letter4.png'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+// Import Swiper styles
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
 import box from '../../../tools/img/gift/box.png'
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import {isMobile} from 'react-device-detect'
 import {dbService, stService} from '../../../tools/fbase'
 import {Link} from 'react-router-dom'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import gift1 from '../../../tools/img/gift/gift1.png'
 import gift2 from '../../../tools/img/gift/gift2.png'
 import gift3 from '../../../tools/img/gift/gift3.png'
@@ -137,6 +139,7 @@ function GiftMake() {
     const [giftycon, setGiftycon] = useState('');
     const [giftCode, setGiftCode] = useState('');
     const [randomId, setRandomId] = useState('');
+    const [ranTwo, setRanTwo] = useState([]);
     const [sim, setSim] = useState('');
     const photoInput = useRef();
     const inputClick = () => {
@@ -144,8 +147,8 @@ function GiftMake() {
     };
 
     useEffect(() => {
-        console.log(Math.random().toString(36).substr(2,11))
         setRandomId(Math.random().toString(36).substr(2,11));
+        returnRandomNum();
     },[])
     
     const onClickEmotion = item => {
@@ -242,6 +245,15 @@ function GiftMake() {
         )
     }
 
+    const returnRandomNum = () => {
+        let first =  Math.floor( Math.random() * colorList.length )
+        let second =  Math.floor( Math.random() * colorList.length )
+        while(first === second){
+            second =  Math.floor( Math.random() * colorList.length )
+        }
+        setRanTwo([first, second])
+    }
+
     return (
         <OUT>
         <ChakraProvider>
@@ -324,10 +336,13 @@ function GiftMake() {
                                 ref={photoInput}
                                 style={{display: 'none', cursor: 'pointer', objectFit:'cover'}}
                             />
-                            <div className="gift__gift-container">
-                                <img src={giftycon} style={{width:'100%', borderRadius:'6px'}} />
-                                <input placeholder="선물에 관한 정보를 입력해주세요." className="gift__input-info" />
-                            </div>
+                            {
+                                giftycon && 
+                                <div className="gift__gift-container">
+                                    <img src={giftycon} style={{width:'100%', borderRadius:'6px'}} />
+                                    <input placeholder="선물에 관한 정보를 입력해주세요." className="gift__input-info" />
+                                </div>
+                            }
                         </div>
                     }
                     </div>
@@ -337,30 +352,20 @@ function GiftMake() {
                         🎨 편지지 디자인
                     </div>
                     <div className="centero" style={{flexDirection:'row', flexWrap:'wrap'}}>
-                        {LetterBackOptions.map((item, index) => {
-                            return(
-                                <div key={index} className="gift__img-box" onClick={() => setLetterType(item.type)} style={{border:`2px solid ${item.type === letterType ? PCOLOR : 'rgba(0,0,0,0)'}`}}>
-                                    <img src={item.src} style={{width:'100%'}} />
-                                </div>
-                            )
-                        })}
-                    </div>
-                    {/* <div style={{display:'flex', flexDirection:'row', width:'100%', boxSizing:'border-box', flexWrap:'wrap'}}>
-                        {
-                            LetterBackOptions.map((item, index) => {
-                                let picked = letterType === item.type
-
+                        <Swiper
+                            slidesPerView={3}
+                            spaceBetween={15}
+                            className="mySwiper"
+                        >
+                            {LetterBackOptions.map((item, index) => {
                                 return(
-                                    <div className="gift-img__radio" onClick={() => {setLetterType(item.type)}} 
-                                        style={{
-                                            backgroundImage:`url(${item.src})`,
-                                            border:`1px solid ${picked ? PCOLOR : 'rgba(0,0,0,0)'}`, 
-                                        }}
-                                    />
+                                    <SwiperSlide key={index} onClick={() => setLetterType(item.type)} style={{border:`2px solid ${item.type === letterType ? PCOLOR : 'rgba(0,0,0,0)'}`}}>
+                                        <img src={item.src} style={{height:'100%'}} />
+                                    </SwiperSlide>
                                 )
-                            })
-                        }
-                    </div> */}
+                            })}
+                        </Swiper>
+                    </div>
                 </div>
                 <div className="gift__one-question" style={{flexDirection:'column'}}>
                     <div className="gift__q">
@@ -368,7 +373,7 @@ function GiftMake() {
                     </div>
                     <div className="centera" style={{position:'relative'}}>
                         <div className="gift__letter centero" style={{backgroundImage:`url(${LetterBackOptions[letterType].src})`}}>
-                            <div style={{backgroundColor:'rgba(255,255,255,0.3)', width:'100%', height:'100%', position:'absolute', zIndex:'3'}}></div>
+                            <div style={{backgroundColor:'rgba(255,255,255,0.5)', width:'100%', height:'100%', position:'absolute', zIndex:'3'}}></div>
                             <TextareaAutosize placeholder="편지를 작성해주세요." className="gift__letter-input" value={letter} onChange={e => {setLetter(e.currentTarget.value)}} />
                         </div>
                     </div>
@@ -395,8 +400,8 @@ function GiftMake() {
                             })
                         }
                     </div>
-                    <div className="gift__box-element">
-                    {/* <div style={{background:`linear-gradient(90deg, ${colorList[0]} 0%, ${colorList[2]} 100%)`, borderRadius:'6px', margin:'20px 0px', padding:'5px'}}> */}
+                    {/* <div className="gift__box-element"> */}
+                    <div className="gift__box-element" style={{background:`linear-gradient(90deg, ${colorList[ranTwo[0]]} 0%, ${colorList[ranTwo[1]]} 100%)`}}>
                         <img src={box} style={{width:'60%', margin:'10px 0px'}} />
                         <div style={{margin:'10px 0px', fontSize:'0.9em'}}>
                             { to }님에게
@@ -422,24 +427,36 @@ function GiftMake() {
                         <div style={{width:'100%', textAlign:'center'}}>
                             <input value={sim} onChange={e => setSim(e.currentTarget.value)} className="gift__input" style={{width:'10vw', textAlign:'center'}} />&nbsp; 같은 사람
                         </div>
-                        <div style={{width:'100%', fontSize:'0.8em', textAlign:'center', marginTop:'10px'}}>
+                       <div style={{width:'100%', fontSize:'0.8em', textAlign:'center', marginTop:'10px'}}>
                             보기 : 곰, 용, 산, 금 등등..
                         </div>
                     </div>
                 </div>
                 <div className="gift__one-question" style={{flexDirection:'column'}}>
                     <div className="gift__q">
-                        💬 카카오톡 공유 시 이미지 고르기
+                        💬 카카오톡 공유 시 표시되는 이미지 고르기
                     </div>
                     <div className="centero" style={{flexDirection:'row', flexWrap:'wrap'}}>
-                        {KakaoImageOptions.map((item, index) => {
-                            return(
-                                <div key={index} className="gift__img-box" onClick={() => setShareType(item.type)} style={{border:`2px solid ${item.type === shareType ? PCOLOR : 'rgba(0,0,0,0)'}`}}>
-                                    <img src={item.src} style={{width:'100%'}} />
-                                </div>
-                            )
-                        })}
+                        <Swiper
+                            slidesPerView={3}
+                            spaceBetween={15}
+                            className="mySwiper"
+                        >
+                            {KakaoImageOptions.map((item, index) => {
+                                return(
+                                    <SwiperSlide key={index} className="gift__img-box" onClick={() => setShareType(item.type)} style={{border:`2px solid ${item.type === shareType ? PCOLOR : 'rgba(0,0,0,0)'}`}}>
+                                        <img src={item.src} />
+                                    </SwiperSlide>
+                                )
+                            })}
+                        </Swiper>
                     </div>
+                </div>
+                <div style={{textAlign:'left', width:'90%', margin:'30px 0px', lineHeight:'1.3rem'}}>
+                    <strong>선물 포장을 마쳤어요.
+                    이제 선물을 전달해봐요!</strong> <br/><br/>
+                    <strong>'선물 상자 미리보기'</strong>에서는 받은 사람이 보게될 선물 상자 화면을 볼 수 있고,<br/><br/>
+                    <strong>'저장 후 보내기'</strong>를 통해서는 포장된 선물상자 링크를 전달할 수 있어요.
                 </div>
                 <div className="gift-fab__container">
                     <button className="gift-fab gsecondary" onClick={() => seeAdvance()}>
