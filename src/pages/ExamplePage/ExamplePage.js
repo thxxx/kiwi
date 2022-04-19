@@ -61,12 +61,12 @@ const exs = [
         url:'datasurfeeex'
     },
     {
-        img : s1,
+        img : s2,
         title:"Code Note",
         url:'codenotesurfeeex'
     },
     {
-        img : s2,
+        img : s1,
         title:"Cakehouse",
         url:'cakehousesurfeeex'
     },

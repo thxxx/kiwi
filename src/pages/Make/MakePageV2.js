@@ -22,6 +22,7 @@ import produce from 'immer'
 import ChannelTalk from '../../tools/ChannelTalk'
 import {ButtonEditor} from '../../components/Make/tools/Editor'
 import ReactGa from 'react-ga'
+import { Helmet } from 'react-helmet'
 
 export const MyContext = React.createContext({
     state : {},
@@ -80,7 +81,6 @@ const MakePageV2 = ({history, userObj}) => {
 
     // 반복 실행되는 useEffect
     useEffect(() => {
-        console.log(contents)
         setContents(contents)
         // function repeat(){
         //     saveLocalStorage();
@@ -268,6 +268,22 @@ const MakePageV2 = ({history, userObj}) => {
         :
     <>
         <MyContext.Provider value={contextValue}>
+            {/* 유즈티풀 사용 */}
+            <Helmet>
+            <script>
+            {
+            (function (w, d, s) {
+                    var a = d.getElementsByTagName('head')[0];
+                    var r = d.createElement('script');
+                    r.async = 1;
+                    r.src = s;
+                    r.setAttribute('id', 'usetifulScript');
+                    r.dataset.token = "72cff1a0d5088f1865159a738121aec2";
+                            a.appendChild(r);
+                })(window, document, "https://www.usetiful.com/dist/usetiful.js")
+            }
+            </script>
+            </Helmet>
            <MySubContext.Provider value={contextSubValue}>
             <Prompt 
                 when={true}

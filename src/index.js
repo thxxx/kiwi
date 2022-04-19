@@ -11,10 +11,9 @@ import {ScrollToTop} from './App'
 AOS.init(); 
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <ScrollToTop /> */}
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <App />,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

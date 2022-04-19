@@ -71,7 +71,7 @@ const CustomButton = (type) => { return (
             border:'none',
             textAlign: 'center',
             fontSize:`${isMobile ? '10px' : '14px'}`,
-            fontFamily:`${state.setting.smallFont}`,
+            fontFamily:`Pretendard-Regular`,
             borderRadius:`${state.setting[type].borderRadius}px`,  
             backgroundColor:`rgba(0,0,0,0)`, 
             padding:'12px 16px',

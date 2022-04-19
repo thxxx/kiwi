@@ -81,6 +81,7 @@
     font-size:1em;
     font-weight:700;
     padding:0px 30px;
+    text-align: center;
 }
 
 .vote-option:hover{

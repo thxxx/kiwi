@@ -29,7 +29,11 @@ function FeaturesSection({content, setting}) {
                             <div className="df-margin-big feature-title" style={{width:'100%'}}>
                                 <div 
                                     className={state.isPhone ? content.mobile.align === 'start' ? 'alignLeft' : 'alignCenter' : content.elementText.align === 'start' ? 'alignLeft' : 'alignCenter'}
-                                    style={{width:'100%', color:`${content.elementText.titleColor}`, fontSize:`${content.elementText.titleSize/20}em`}}>
+                                    style={{
+                                        width:'100%', 
+                                        color:`${content.elementText.titleColor}`, 
+                                        fontFamily:`${setting.font}`,
+                                        fontSize:`${content.elementText.titleSize/20}em`}}>
                                     <Editor 
                                         data={item.title}
                                         onChange={(event, editor) => {

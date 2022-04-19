@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import TitleDesc from './components/TitleDesc'
 import ImageOrSlide from './components/ImageOrSlide'
 import TextAuto from './components/TextAuto'
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import AnimationDiv from './components/AnimationDiv'
 
 function VideoSection({content, setting}) {

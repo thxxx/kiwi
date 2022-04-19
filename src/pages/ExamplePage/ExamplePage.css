@@ -59,6 +59,21 @@
     border:1px solid white;
 }
 
+.excard-button-3{
+    width:130px;
+    margin:5px;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.616);
+    color:black;
+}
+
+.excard-button-3:hover{
+    background-color:rgba(255, 255, 255, 0.916);
+}
+
 .excard-image:hover .excard-black{
     display:flex
 }
