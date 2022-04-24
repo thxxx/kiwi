@@ -11,6 +11,7 @@
     /* background-color:rgba(243, 243, 243, 0.685); */
     font-family: Noto Sans KR;
     cursor:default;
+    position:relative;
 }
 
 .excard-image{

@@ -31,6 +31,9 @@ function NavBarV2({history, scrollPosition, isLoggedIn, buttonOpen}) {
                         }}>
                             Surfee 소개
                         </div>
+                        <Link to="/surfeecontest" className="nav-left-text" style={{marginLeft:'1vw'}}>
+                            콘테스트
+                        </Link>
                     </div>
                 </div>
                 
@@ -53,6 +56,9 @@ function NavBarV2({history, scrollPosition, isLoggedIn, buttonOpen}) {
                             </div>
                             <Link to="/vote" className="nav-left-text" style={{marginLeft:'1vw'}}>
                                 신규 기능 투표
+                            </Link>
+                            <Link to="/surfeecontest" className="nav-left-text" style={{marginLeft:'1vw'}}>
+                                콘테스트
                             </Link>
                         </div>
                         {

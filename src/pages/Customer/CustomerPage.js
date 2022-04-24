@@ -12,8 +12,7 @@ function CustomerPage({history, isLoggedIn}) {
     const [cnum, setCnum] = useState(1);
     const [cnums, setCnums] = useState([1,2,3]);
     
-    useEffect(()=>{
-
+    useEffect(() => {
         // ReactGa.initialize('UA-213792742-1');
         // ReactGa.pageview('/customerPage');
     });

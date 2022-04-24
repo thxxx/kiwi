@@ -44,7 +44,7 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             <Route exact path="/" onUpdate={() => window.scrollTo(0, 0)}>
                                 <MainPageV3 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
                             </Route>
-                            {/* <Route path="/response" onUpdate={() => window.scrollTo(0, 0)}>
+                            <Route path="/response" onUpdate={() => window.scrollTo(0, 0)}>
                                 <ResponsePage history={history} userObj={userObj}/> 
                             </Route>
                             <Route path="/submit">
@@ -54,11 +54,11 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                                 path="/make" 
                                 onUpdate={() => window.scrollTo(0, 0)}>
                                 <MakePageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
-                            </Route> */}
-                            {/* <Route 
+                            </Route>
+                            <Route 
                                 path="/make/:code" 
                                 onUpdate={() => window.scrollTo(0, 0)}
-                                render={(history, isLoggedIn, userObj) => <MakePageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj} />} /> */}
+                                render={(history, isLoggedIn, userObj) => <MakePageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj} />} />
                             <Route path="/questions" onUpdate={() => window.scrollTo(0, 0)}>
                                 <FirstQuestions history={history} isLoggedIn={isLoggedIn}/>
                             </Route>
