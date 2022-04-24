@@ -1,12 +1,24 @@
 .content__top-container{
     background-color: #E8E7FF;
     text-align: center;
-    padding:160px 0px 70px 0px;
+    padding:150px 20px 70px 20px;
     font-size:20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.contest__top-title{
+    text-align: center;
+    font-size:2em;
+    font-weight:700;
+}
+
+.contest__top-desc{
+    text-align: center;
+    font-size:0.9em;
+    margin-top:10px;
 }
 
 .contest__search-container{
@@ -22,6 +34,7 @@
     border-radius: 200px;
     border:1px solid rgb(165, 165, 165);
     padding:0px 16px;
+    margin-left:10vw;
 }
 
 .contest__search-input{
@@ -42,5 +55,88 @@
     flex-wrap: wrap;
     justify-items: center;
     align-items: center;
-    width:80%;
+    width:90%;
+}
+
+.order-button{
+    padding:12px 18px;
+    width:150px;
+    color:var(--main-black-01);
+    cursor: pointer;
+    text-align: center;
+    /* white */
+    background: #FFFFFF;
+    /* 드롭박스 섀도우 */    
+    border:1px solid rgba(82, 82, 82, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    position:relative;
+    background-color: white;
+    font-size:15px;
+}
+
+.order-button:hover{
+    background-color: var(--main-light-gray);
+}
+
+.order-option{
+    width:150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    padding:12px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.order-option:hover{
+    background-color: var(--main-light-gray);
+}
+
+.contest__search-container .css-1ozmk1d{
+    padding:0px;
+    min-width:0px;
+}
+
+.contest__heart{
+    transition: all .5s ease-in-out;
+}
+
+.contest__heart:hover{
+    color: #EB4956;
+}
+
+.contest__top-desc a{
+    color:rgb(0, 0, 141);
+}
+.contest__top-desc a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:800px){
+    .contest__top-title{
+        font-size: 1.3em;
+    }
+    .contest__top-desc{
+        font-size: 0.75em;
+    }
+    .contest__search-box{
+        border-radius: 200px;
+        border:1px solid rgb(165, 165, 165);
+        padding:0px 16px;
+        margin-left:0vw;
+    }
+    .contest__search-input{
+        border-radius: 200px;
+        border:none;
+        padding:10px 5px;
+        font-size:0.85em;
+        width:50vw;
+    }
+    .order-button{
+        width:20vw;
+        padding:10px 9px;
+    }
 }

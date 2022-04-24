@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { styled } from '@mui/system';
 import MainPage from '../Landing/old/MainPage'
 import { dbService } from '../../tools/fbase'
+import UploadContest from './UploadContest'
 
 const RadioButton = styled('div')`
     margin:10px;
@@ -91,7 +92,7 @@ function AdminPage({history}) {
     const switchType = () => {
         switch (type){
             case 0:
-                return(<MainPage history={history} />)
+                return(<UploadContest history={history} />)
             case 1:
                 return(
                     <div>

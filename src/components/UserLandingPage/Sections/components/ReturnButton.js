@@ -70,7 +70,7 @@ const CustomButton = (type) => { return (
             cursor:'pointer',
             border:'none',
             textAlign: 'center',
-            fontSize:`${isMobile ? '10px' : '14px'}`,
+            fontSize:`${isMobile ? '12px' : '15px'}`,
             fontFamily:`Pretendard-Regular`,
             borderRadius:`${state.setting[type].borderRadius}px`,  
             backgroundColor:`rgba(0,0,0,0)`, 

@@ -19,7 +19,7 @@ function ReturnButton({content, onlyapp}){
             boxShadow:`${state.setting[type].shadow ? '1px 2px 4px rgba(0,0,0,0.2)' : 'none'}`,
             border:`${state.setting[type].border ? `1px solid ${state.setting[type].borderColor}` : 'none'}`,
             textAlign: 'center',
-            fontSize:`${state.isPhone ? '10px' : '14px'}`,
+            fontSize:`${state.isPhone ? '12px' : '15px'}`,
         }}>
             <div style={{
                 padding:'10px 15px',
