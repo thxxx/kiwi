@@ -73,6 +73,7 @@ const OpenCloseCustom = (props) => {
       <div className={props.type === 'card' ? 'accordion__card' : 'accordion__plain'}>
         <div className="accordion__header-qna" onClick={() => {setOpen(!open)}}>
           <div className="edit-element">
+<<<<<<< HEAD:src/components/UserLandingPage/Sections/components/QnaOpenClose.js
             <div className="accordion__title">
               <div className="title_text" style={{color:`${props.color}`, width:'100%', alignItems: 'start'}}>
                 <div className="qna__word" style={{fontWeight:'700'}}>Q.</div>
@@ -98,6 +99,10 @@ const OpenCloseCustom = (props) => {
               </div> 
             </div>
             <div className="centera" style={{justifyContent: 'flex-end', width:'20%'}}>
+=======
+            <div className="onoff-title">
+              {props.title}
+>>>>>>> d40f1f954 (Test second..):src/components/Make/Edit/tools/OpenCloseCustom.js
               {
                 isopen !== 'open' ? 
                 <>

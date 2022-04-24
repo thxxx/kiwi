@@ -14,6 +14,7 @@
     /* border-bottom:1px solid var(--edit-main-border-color); */
 }
 
+<<<<<<< HEAD
 .edit-element-bar{
     margin-right: 20px;
     height: 87px;
@@ -21,17 +22,23 @@
     border: 1px solid #E8F0F9;
 }
 
+=======
+>>>>>>> d40f1f954 (Test second..)
 .switch-element{
     width:100%;
     display:flex;
     align-items : center;
     box-sizing: border-box;
     padding:var(--edit-main-padding);
+<<<<<<< HEAD
 }
 .switch-text{
     width: 75px;
     font-size: var(--func-subtitle);
     font-weight: 700;
+=======
+    margin-top: 40px;
+>>>>>>> d40f1f954 (Test second..)
 }
 
 .border{
@@ -60,9 +67,13 @@
     align-items : center;
     /* padding:10px 10px 10px 20px; */
     width:100%;
+<<<<<<< HEAD
     font-size: var(--func-subtitle);
     font-weight: 700;
     /* padding-left: 31px; */
+=======
+    padding-left: 31px;
+>>>>>>> d40f1f954 (Test second..)
 }
 .switch-element__left{
     margin-right: 13px;
@@ -71,7 +82,10 @@
 .onoff-title{
     padding-left: 0px;
     width: 100%;
+<<<<<<< HEAD
     height: 100%;
+=======
+>>>>>>> d40f1f954 (Test second..)
 }
 
 .edit-element__right{

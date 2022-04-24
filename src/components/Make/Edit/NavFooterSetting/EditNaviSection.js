@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useContext} from 'react'
 import { MyContext } from '../../../../pages/Make/MakePageV2'
 import RadioCustom from '../tools/Custom/RadioCustom'
@@ -8,6 +9,21 @@ import InputCustom from '../tools/Custom/InputCustom'
 import ElementsTable from '../EditTemplates/tools/ElementsTable'
 import SliderCustom from '../tools/Custom/SliderCustom'
 import BoxCustom from '../tools/Custom/BoxCustom'
+=======
+import React, {useState} from 'react'
+import {EditRadioContainer} from '../tools/RadioCustom'
+import EditButtonTable from '../tools/EditButtonTable'
+import {EditColorContainer} from '../tools/ColorCustom'
+import OpenCloseCustom from '../tools/OpenCloseCustom'
+import OnOffCustom from '../tools/OnOffCustom'
+import InputCustom from '../tools/InputCustom'
+import ResponsiveCustom from '../tools/ResponsiveCustom'
+import CheckBoxContainer from '../tools/CheckBoxContainer'
+import ElementsTable from '../tools/ElementsTable'
+import EditSlider from '../tools/EditSlider'
+import TextSizeCustom from '../tools/TextSizeCustom'
+import BoxCustom from '../tools/BoxCustom'
+>>>>>>> d40f1f954 (Test second..)
 import produce from 'immer';
 import AddContentImg from '../tools/func/FuncContentImg'
 import {Phone} from '@styled-icons/bootstrap'
@@ -161,8 +177,13 @@ function EditNaviSection({navi, setNavi, category}) {
                         </>
                     }
                 </OpenCloseCustom>
+<<<<<<< HEAD
                 <OpenCloseCustom title="높이" use={true}>
                     <SliderCustom text="높이를" value={navi.height} func={e => setNavi({...navi, height:e})}/>
+=======
+                <OpenCloseCustom title="높이">
+                    <EditSlider text="높이 조정" value={navi.height} func={e => setNavi({...navi, height:e})}/>
+>>>>>>> d40f1f954 (Test second..)
                 </OpenCloseCustom>
                 <BoxCustom title="반응형">
                 <div className="edit-element">

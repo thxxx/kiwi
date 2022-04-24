@@ -14,6 +14,14 @@
 .image-input:hover{
     border:1px dashed rgba(240,240,240,1);
 }
+<<<<<<< HEAD
+=======
+.button__container{
+    display:flex;
+    position:relative;
+    width:100%;
+}
+>>>>>>> d40f1f954 (Test second..)
 
 .action-button{
     border:none;
@@ -22,6 +30,9 @@
     box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     font-size:1em;
     width:fit-content;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+>>>>>>> d40f1f954 (Test second..)
 }
 

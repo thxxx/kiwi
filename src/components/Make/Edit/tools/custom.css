@@ -151,11 +151,20 @@
     background-color:white;
 }
 
+.slider{
+    width: 311px;
+    margin-top: 29px;
+    margin-bottom: 10px;
+}
+
 /* 아래는 콘텐트 이미지 추가 관련 css */
 .top-img-div{
     display: flex;
+<<<<<<< HEAD
     margin-left: 5px;
     width:100%;
+=======
+>>>>>>> d40f1f954 (Test second..)
 }
 .put-img-div{
     width: 128px;
@@ -168,6 +177,7 @@
     background-repeat : no-repeat;
     background-size : cover;
 }
+<<<<<<< HEAD
 .put-slider-img{
     width: 118px;
     height: 118px;
@@ -179,11 +189,17 @@
     background-repeat : no-repeat;
     background-size : cover;
 }
+=======
+>>>>>>> d40f1f954 (Test second..)
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
         /* overflow: hidden; */
+<<<<<<< HEAD
       width: 290px;
+=======
+      width: 311px;
+>>>>>>> d40f1f954 (Test second..)
       -webkit-appearance: none;
       background-color: #F2F6FA;
       border-radius: 4px;
@@ -239,16 +255,24 @@
     transform: rotate(45deg);
 }
 .upload-div{
+<<<<<<< HEAD
     margin-left: 10px;
     width:100%;
 }
 
 .upload-img-click{
+=======
+    padding: 30px 1px 30px 0px; 
+    margin-left: 10px;
+}
+.upload-click{
+>>>>>>> d40f1f954 (Test second..)
     cursor: pointer;
     background: linear-gradient(180deg, #9281FF 0%, #6C63FF 100%);
     /* 메인 섀도우 01 */
     box-shadow: 4px 4px 15px #D0CDFF;
     border-radius: 32px;
+<<<<<<< HEAD
     width:100%;
     padding:15px 0px;
     font-style: normal;
@@ -264,6 +288,19 @@
     justify-content:center;
 }
 
+=======
+    width: 208px;
+    height: 37px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #FFFFFF;
+    padding-top: 21px;
+}
+>>>>>>> d40f1f954 (Test second..)
 .small-command{
     vertical-align: middle;
     height: 48px;
@@ -273,6 +310,7 @@
     cursor: pointer;
     margin: 0 auto;
     margin-top: 12px;
+<<<<<<< HEAD
     font-weight: 600;
 }
 .mid-command{
@@ -280,11 +318,19 @@
     height: 30px;
     font-size: var(--small-text);
     font-weight: 700;
+=======
+}
+.mid-command{
+    vertical-align: middle;
+    height: 55px;
+    font-size: 12px;
+>>>>>>> d40f1f954 (Test second..)
     line-height: 12px;
     text-align: center;
     cursor: pointer;
     margin: 0 auto;
     margin-top: 12px;
+<<<<<<< HEAD
     color: var(--main-dark-gray);
 }
 .mid-command-light{
@@ -301,6 +347,10 @@
 }
 .embed-command{
     font-weight: 600;
+=======
+}
+.embed-command{
+>>>>>>> d40f1f954 (Test second..)
     vertical-align: middle;
     height: 48px;
     font-size: 10px;

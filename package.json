@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.8.1",
+<<<<<<< HEAD
     "@chakra-ui/slider": "^1.5.3",
     "@chakra-ui/theme": "^1.13.1",
     "@chakra-ui/theme-tools": "^1.3.2",
@@ -20,6 +21,22 @@
     "@ckeditor/ckeditor5-react": "^3.0.3",
     "@ckeditor/ckeditor5-theme-lark": "^33.0.0",
     "@ckeditor/ckeditor5-typing": "^33.0.0",
+=======
+<<<<<<< HEAD
+=======
+    "@chakra-ui/slider": "^1.5.3",
+    "@chakra-ui/theme": "^1.13.1",
+    "@chakra-ui/theme-tools": "^1.3.2",
+>>>>>>> e3723ae23 (Design main>contents)
+    "@ckeditor/ckeditor5-alignment": "^31.1.0",
+    "@ckeditor/ckeditor5-basic-styles": "^31.1.0",
+    "@ckeditor/ckeditor5-editor-inline": "^31.1.0",
+    "@ckeditor/ckeditor5-essentials": "^31.1.0",
+    "@ckeditor/ckeditor5-font": "^31.1.0",
+    "@ckeditor/ckeditor5-link": "^31.1.0",
+    "@ckeditor/ckeditor5-list": "^31.1.0",
+    "@ckeditor/ckeditor5-paste-from-office": "^31.1.0",
+>>>>>>> d40f1f954 (Test second..)
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
@@ -62,9 +79,13 @@
     "react-device-detect": "^2.1.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
+<<<<<<< HEAD
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-input-autosize": "^3.0.0",
+=======
+    "react-icons": "^4.3.1",
+>>>>>>> d40f1f954 (Test second..)
     "react-intersection-observer": "^8.33.1",
     "react-overflow-scrolling": "^1.0.1",
     "react-router-dom": "^5.3.0",

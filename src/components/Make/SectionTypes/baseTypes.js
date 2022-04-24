@@ -157,13 +157,50 @@ export const base = [
             ...commons.desc,
             text:'Surfee에 오신 것을 환영합니다. 자유롭게 사용해보세요! \n여기를 클릭하여 서비스 및 상품에 대한 핵심설명을 적어보세요.'
         },
+<<<<<<< HEAD
         button:{
             ...button.button,
             ctaText:'버튼 클릭을 유도할 문구를 적어보세요.'
+=======
+        image:{
+            oneImg:true,
+            type:'image',
+            attachment:'',
+            width:70,
+            border:0,
+            size:200,
+            slide:false,
+            
+        },
+        slide_img:{
+            slide1: '',
+            slide2: '',
+            slide3: '',
+>>>>>>> d40f1f954 (Test second..)
         },
         appButton:{
             ...button.appButton,
             use: false,
+<<<<<<< HEAD
+=======
+            type: 'base',
+            file: '',
+            youtube: false,
+            link: '',
+            auto: true
+        },
+        button:{
+            title:'버튼입니다.',
+            backgroundColor:'#ffffff',
+            buttonTemplate:1,
+            func:1,
+            link:"https://surfee.co.kr",
+            first:true,
+            second:false,
+            align:'0',
+            ctaUse:true,
+            ghostUse:false,
+>>>>>>> d40f1f954 (Test second..)
         },
         image:{
             ...contents.image,
@@ -187,10 +224,29 @@ export const base = [
             text:'Surfee에 오신 것을 환영합니다. 자유롭게 사용해보세요! \n여기를 클릭하여 서비스 및 상품에 대한 핵심설명을 적어보세요.'
         },
         image:{
+<<<<<<< HEAD
             ...contents.image,
             attachment:heroanimation,
             size:67,
         }
+=======
+            attachment:'',
+            width:70,
+            shadow: true,
+            shadowValue: "2px 4px 20px #E8F0F9"
+        },
+        animation:{
+            use:true,
+            type:'none',
+        },
+        button:{
+            title:'버튼입니다.',
+            backgroundColor:'#ffffff',
+            buttonTemplate:1,
+            func:1,
+            link:"https://surfee.co.kr"
+        },
+>>>>>>> d40f1f954 (Test second..)
     },
     {
         ...commons,
