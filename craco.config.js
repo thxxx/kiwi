@@ -1,3 +1,5 @@
+const CracoAlias = require("craco-alias");
+
 const { styles } = require("@ckeditor/ckeditor5-dev-utils");
 const CKEditorWebpackPlugin = require("@ckeditor/ckeditor5-dev-webpack-plugin");
 const cssRegex = /\.css$/;
@@ -71,14 +73,12 @@ const enableCKEWebpackConfigPlugin = (webpackConfig, { env, paths }) => {
   return webpackConfig;
 };
 module.exports = {
+  mode: 'development',
+  devServer:{
+    historyApiFallback: true
+  },
   webpack: {
     alias: {},
-    plugins: [
-      
-    ],
-    devServer: (devServerConfig, { env, paths, proxy, allowedHost }) => { 
-      devServerConfig.historyApiFallback = true;
-      return devServerConfig; },
     configure: (webpackConfig, { env, paths }) => {
         webpackConfig.plugins.push(new CKEditorWebpackPlugin({ language: "ko", addMainLanguageTranslationsToAllAssets: true}));
         return enableCKEWebpackConfigPlugin(webpackConfig, { env, paths });
