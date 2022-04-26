@@ -6088,6 +6088,11 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
+"craco-alias@^3.0.1":
+  "integrity" "sha512-N+Qaf/Gr/f3o5ZH2TQjMu5NhR9PnT1ZYsfejpNvZPpB0ujdrhsSr4Ct6GVjnV5ostCVquhTKJpIVBKyL9qDQYA=="
+  "resolved" "https://registry.npmjs.org/craco-alias/-/craco-alias-3.0.1.tgz"
+  "version" "3.0.1"
+
 "craco@^0.0.3":
   "integrity" "sha512-eeibbwJm1CTf/j3xvNgNmsRS7abegp4Cfm5qtn5nE9/0JjZRas+FHj8IlT8FMFWR0XOyZFGcWZgzaTU19DNGoQ=="
   "resolved" "https://registry.npmjs.org/craco/-/craco-0.0.3.tgz"
