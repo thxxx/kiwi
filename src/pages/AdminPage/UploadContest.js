@@ -20,6 +20,7 @@ function UploadContest() {
     const [phone, setPhone] = useState(0)
     const [src, setSrc] = useState('')
     const [urlId, setUrlId] = useState('')
+    const [title, setTitle] = useState('')
 
     const upload = async () => {
 
@@ -34,6 +35,7 @@ function UploadContest() {
             phone:parseInt(phone),
             urlId:urlId,
             vote:0,
+            title:title,
             img:attachmentURL,
         }
 
@@ -82,6 +84,10 @@ function UploadContest() {
                 페이지 url : (template1)
             </Title>
             <input type="text" value={urlId} onChange={e => setUrlId(e.currentTarget.value)} />
+            <Title>
+                타이틀 :
+            </Title>
+            <input type="text" value={title} onChange={e => setTitle(e.currentTarget.value)} />
             <div onClick={() => upload()} style={{cursor:'pointer', fontSize:'30px', padding:'10px', margin:'10px', backgroundColor:'yellow'}}>
                 올리기!
             </div>

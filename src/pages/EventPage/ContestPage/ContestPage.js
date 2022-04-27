@@ -203,7 +203,7 @@ function ContestPage({history, isLoggedIn}) {
                     </div>
                 </div>
                 <div className="excard-title" style={{flexDirection:'column', alignItems:'start', justifyContent:'center'}}>
-                    <div style={{fontWeight:'700'}}>{item.urlId}</div>
+                    <div style={{fontWeight:'700'}}>{item.title}</div>
                     <div>
                         Designed by. {item.name} ({item.phone})
                     </div>

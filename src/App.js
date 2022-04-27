@@ -10,6 +10,9 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
+  console.log('welcome to Surfee!')
+  
+
   useEffect(() => {
     // 유저가 제작한 랜딩페이지에 들어가는 사람들까지 로그인 검사를 하면 속도가 느려지니까
     if(window.location.host.split(".")[0] === "surfee" || window.location.host.split(".")[0] === "localhost:3000"){

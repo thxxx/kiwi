@@ -73,9 +73,8 @@ const enableCKEWebpackConfigPlugin = (webpackConfig, { env, paths }) => {
   return webpackConfig;
 };
 module.exports = {
-  mode: 'development',
-  devServer:{
-    historyApiFallback: true
+  devServer: {
+    historyApiFallback: true,
   },
   webpack: {
     alias: {},
