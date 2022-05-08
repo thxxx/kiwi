@@ -186,8 +186,8 @@ function ContestPage({history, isLoggedIn}) {
                         <Heart size="29" className="contest__heart" style={{ backgroundColor:'rgba(240,240,240,0.5)', padding:'4px', borderRadius:'4px' }} />
                     }
                 </span>
-                <span style={{position:'absolute', top:'10px', right:'10px', borderRadius:'4px', fontSize:'1.1em', fontWeight:'700', backgroundColor:'rgba(240,240,240,0.5)', padding:'4px'}}>
-                    {item.vote}표
+                <span style={{position:'absolute', top:'10px', right:'10px', borderRadius:'4px', fontSize:'1em', fontWeight:'500', backgroundColor:'rgba(240,240,240,0.5)', padding:'2px 4px'}}>
+                    비공개
                 </span>
                 <div className="back-image-fit excard-image"
                     style={{backgroundImage:`url(${img})`, cursor:'pointer'}}>

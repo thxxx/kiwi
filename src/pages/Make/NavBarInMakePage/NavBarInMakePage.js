@@ -360,8 +360,6 @@ const afterSaveImage = async (returned) => {
 
                 let content = saveData[0]
 
-                console.log(content, "컨텐츠")
-
                 const urlDatas = await dbService
                 .collection("published-page")
                 .where("urlId", "==", content.urlId)

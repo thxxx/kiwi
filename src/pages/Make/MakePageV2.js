@@ -92,15 +92,12 @@ const MakePageV2 = ({history, userObj}) => {
 
     // 처음에 한번만 실행되는 useEffect
     useEffect(() => {
-        console.log("ㅊㅓ음 한번만")
-        
         // to report page view
         ReactGa.initialize('UA-213792742-1');
         ReactGa.pageview(`/make`);
         // 관리하기 페이지에서 state.item으로 내용을 가지고 넘어왔다.
         if(location.state !== undefined){
             if(location.state.now){
-                console.log("첫 제작으로 넘어옴")
                 setLoad(false);
                 loadLocalStorage()
                 setIsPhone(location.state.isPhone)
@@ -153,8 +150,6 @@ const MakePageV2 = ({history, userObj}) => {
 
         setEditing(true);
         setEditingId(item);
-
-        console.log("check1")
         
         setContents(ttem.contents)
         setNavi(ttem.navi)
@@ -184,8 +179,6 @@ const MakePageV2 = ({history, userObj}) => {
         }else{
             ttem.setting.urlId = ''
 
-            console.log("check1")
-    
             setContents(ttem.contents)
             setNavi(ttem.navi)
             setFoot(ttem.foot)
@@ -210,8 +203,6 @@ const MakePageV2 = ({history, userObj}) => {
 
         let tempSetting = savedPage[0].setting;
         tempSetting.urlId = location.state.urlId
-
-        console.log("check1")
 
         setContents(savedPage[0].contents)
         setNavi(savedPage[0].navi)
@@ -238,8 +229,6 @@ const MakePageV2 = ({history, userObj}) => {
     const loadLocalStorage = () => {
         setLoading(true);
         const temp = JSON.parse(localStorage.getItem('temp'));
-
-        console.log("check1")
 
         setContents(temp[0]);
         setNavi(temp[1]);

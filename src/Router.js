@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
 import UserLandingPage from './pages/UserLanding/UserLandingPage';
-import MainPageV3 from './pages/Landing/MainPageV3';
-import MakePageV2 from './pages/Make/MakePageV2';
+// import MainPageV3 from './pages/Landing/MainPageV3';
+// import MakePageV2 from './pages/Make/MakePageV2';
 import AdminPage from './pages/AdminPage/AdminPage';
 import ResponsePage from './pages/Response/ResponsePage';
 import SubmitPage from './components/Make/unused/SubmitPage';
 import WhatIsSurfee from './pages/Customer/WhatIsSurfee'
 import VotePage from './pages/VotePage/VotePage'
 import FirstQuestions from './pages/Questions/FirstQuestions'
-import ExamplePage from './pages/ExamplePage/ExamplePage'
+// import ExamplePage from './pages/ExamplePage/ExamplePage'
 import SourcingPage from './pages/Sourcing/SourcingPage'
 import GiftPage from './pages/EventPage/GiftPage/GiftPage'
 import GiftMake from './pages/EventPage/GiftPage/GiftMake'
@@ -25,6 +25,10 @@ export const UserContext = React.createContext({
     state : {},
     action : {}
 });
+
+const MakePageV2 = lazy(() => import('./pages/Make/MakePageV2'));
+const MainPageV3 = lazy(() => import('./pages/Landing/MainPageV3'));
+const ExamplePage = lazy(() => import('./pages/ExamplePage/ExamplePage'));
 
 const AppRouter = ({userObj, isLoggedIn}) => {
     const contextValue = {
@@ -42,7 +46,9 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                                 <AdminPage history={history}/>
                             </Route>
                             <Route exact path="/" onUpdate={() => window.scrollTo(0, 0)}>
-                                <MainPageV3 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
+                                <Suspense fallback={<div>로팅..</div>}>
+                                    <MainPageV3 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
+                                </Suspense>
                             </Route>
                             <Route path="/response" onUpdate={() => window.scrollTo(0, 0)}>
                                 <ResponsePage history={history} userObj={userObj}/> 
@@ -50,10 +56,10 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                             <Route path="/submit">
                                 <SubmitPage history={history}/>
                             </Route>
-                            <Route 
-                                path="/make" 
-                                onUpdate={() => window.scrollTo(0, 0)}>
-                                <MakePageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
+                            <Route path="/make" onUpdate={() => window.scrollTo(0, 0)}>
+                                    <Suspense fallback={<div>로팅..</div>}>
+                                        <MakePageV2 history={history} isLoggedIn={isLoggedIn} userObj={userObj}/>
+                                    </Suspense>
                             </Route>
                             <Route 
                                 path="/make/:code" 
@@ -63,7 +69,9 @@ const AppRouter = ({userObj, isLoggedIn}) => {
                                 <FirstQuestions history={history} isLoggedIn={isLoggedIn}/>
                             </Route>
                             <Route path="/surfeeexamples" onUpdate={() => window.scrollTo(0, 0)}>
-                                <ExamplePage history={history} isLoggedIn={isLoggedIn}/>
+                                <Suspense fallback={<div>로팅..</div>}>
+                                    <ExamplePage history={history} isLoggedIn={isLoggedIn}/>
+                                </Suspense>
                             </Route>
                             <Route path="/surfeeintro" onUpdate={() => window.scrollTo(0, 0)}>
                                 <WhatIsSurfee history={history} isLoggedIn={isLoggedIn}/>

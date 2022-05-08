@@ -28,7 +28,6 @@ function GiftBox(props) {
         });
 
         setItem(fd[0])
-        console.log(fd[0])
     }
 
     return (

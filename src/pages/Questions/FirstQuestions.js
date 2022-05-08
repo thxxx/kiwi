@@ -150,7 +150,7 @@ const startupExs = [
     {
         img : s1,
         title:"1인 사업가",
-        url:'homebarsurfeeex'
+        url:'cakehousesurfeeex'
     },
     {
         img : s2,
@@ -163,12 +163,12 @@ const personalExs = [
     {
         img : p1,
         title:"퍼스널 브랜딩",
-        url:'port1surfeeex'
+        url:'port3surfeeex'
     },
     {
-        img : s2,
+        img : p2,
         title:"퍼스널 브랜딩",
-        url:'port2surfeeex'
+        url:'port1surfeeex'
     },
 ]
 

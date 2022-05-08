@@ -47,7 +47,7 @@ function Contents({content}) {
         const oneFile = files[0];
         const reader = new FileReader();
         reader.onloadend = (finishedEvent) => { // 로딩이 끝날 때 실행한다는 뜻.
-            if(oneFile.size > 3000000){
+            if(oneFile.size > 7000000){
                 alert("파일의 크기가 3MB를 초과합니다.")
                 return;
             }

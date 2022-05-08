@@ -127,7 +127,6 @@ function VotePage({history, isLoggedIn}) {
                     </>
                 )
             }
-            console.log(top, num)
         })
     }
 
