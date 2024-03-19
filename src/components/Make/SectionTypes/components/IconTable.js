@@ -73,23 +73,23 @@ export const icons = [
         name:'Checkbox'
     },
     {
-        icon:<ho.Annotation size={ICONSIZE} />,
+        icon:<bs.StarFill size={ICONSIZE} />,
         name:'Annotation'
     },
     {
-        icon:<ho.CurrencyDollar size={ICONSIZE} />,
+        icon:<bs.StarFill size={ICONSIZE} />,
         name:'CurrencyDollar'
     },
     {
-        icon:<ho.Database size={ICONSIZE} />,
+        icon:<bs.StarFill size={ICONSIZE} />,
         name:'Database'
     },
     {
-        icon:<ho.Star size={ICONSIZE} />,
+        icon:<bs.StarFill size={ICONSIZE} />,
         name:'Star'
     },
     {
-        icon:<ho.TrendingUp size={ICONSIZE} />,
+        icon:<bs.StarFill size={ICONSIZE} />,
         name:'TrendingUp'
     },
     {
